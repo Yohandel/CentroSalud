@@ -1,0 +1,15 @@
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\CentroSalud.Application.csproj.AssemblyReference.cache
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\CentroSalud.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\CentroSalud.Application.AssemblyInfoInputs.cache
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\CentroSalud.Application.AssemblyInfo.cs
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\CentroSalud.Application.csproj.CoreCompileInputs.cache
+D:\Projects\CentroSalud\CentroSalud.Application\bin\Debug\net10.0\CentroSalud.Application.deps.json
+D:\Projects\CentroSalud\CentroSalud.Application\bin\Debug\net10.0\CentroSalud.Application.dll
+D:\Projects\CentroSalud\CentroSalud.Application\bin\Debug\net10.0\CentroSalud.Application.pdb
+D:\Projects\CentroSalud\CentroSalud.Application\bin\Debug\net10.0\CentroSalud.Domain.dll
+D:\Projects\CentroSalud\CentroSalud.Application\bin\Debug\net10.0\CentroSalud.Domain.pdb
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\CentroSa.CE8BD3BA.Up2Date
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\CentroSalud.Application.dll
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\refint\CentroSalud.Application.dll
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\CentroSalud.Application.pdb
+D:\Projects\CentroSalud\CentroSalud.Application\obj\Debug\net10.0\ref\CentroSalud.Application.dll

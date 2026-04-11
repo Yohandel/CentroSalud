@@ -1,0 +1,6 @@
+@CentroSalud.Web_HostAddress = http://localhost:5283
+
+GET {{CentroSalud.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

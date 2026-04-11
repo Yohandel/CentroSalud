@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CentroSalud.Domain.Enums
+{
+    public enum TipoEmpleado
+    {
+        ATS,
+        ATSZona,
+        AuxiliarEnfermeria,
+        Celador,
+        Administrativo
+    }
+}

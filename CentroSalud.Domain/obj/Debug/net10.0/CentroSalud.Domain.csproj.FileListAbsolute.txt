@@ -1,0 +1,11 @@
+D:\Projects\CentroSalud\CentroSalud.Domain\bin\Debug\net10.0\CentroSalud.Domain.deps.json
+D:\Projects\CentroSalud\CentroSalud.Domain\bin\Debug\net10.0\CentroSalud.Domain.dll
+D:\Projects\CentroSalud\CentroSalud.Domain\bin\Debug\net10.0\CentroSalud.Domain.pdb
+D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.AssemblyInfoInputs.cache
+D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.AssemblyInfo.cs
+D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.dll
+D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\refint\CentroSalud.Domain.dll
+D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.pdb
+D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\ref\CentroSalud.Domain.dll
