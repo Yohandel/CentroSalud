@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CentroSalud.Application\\Services",
-    "\\CentroSalud.Domain\\Interfaces"
+    "\\CentroSalud.Application\\Services"
   ],
+  "SelectedNode": "\\CentroSalud.Web",
   "PreviewInSolutionExplorer": false
 }

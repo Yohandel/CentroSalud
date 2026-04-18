@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CentroSalud.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66b08b0631facfa9cabc5c7ba7e928550ad7b706")]
 [assembly: System.Reflection.AssemblyProductAttribute("CentroSalud.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CentroSalud.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

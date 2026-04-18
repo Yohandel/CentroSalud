@@ -1,3 +1,4 @@
+using CentroSalud.Application.Interfaces;
 using CentroSalud.Domain.Entities;
 using CentroSalud.Domain.Interfaces;
 
@@ -17,9 +18,9 @@ public class SustitucionService : ISustitucionService
 
         var sustitucion = new Sustitucion
         {
-            MedicoId = medicoId,
+            MedicoSustitutoId = medicoId,
             MedicoReemplazadoId = reemplazadoId,
-            FechaAlta = DateTime.Now
+            FechaInicio = DateTime.Now
         };
 
         await _repo.AddAsync(sustitucion);
@@ -30,7 +31,7 @@ public class SustitucionService : ISustitucionService
         var s = await _repo.GetByIdAsync(sustitucionId);
         if (s == null) throw new Exception("No encontrada");
 
-        s.FechaBaja = DateTime.Now;
+        s.FechaFin = DateTime.Now;
 
         await _repo.UpdateAsync(s);
     }

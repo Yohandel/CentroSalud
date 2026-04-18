@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CentroSalud.Application.DTOs.Medico;
+using CentroSalud.Application.Interfaces;
 
 namespace CentroSalud.Web.Controllers;
 

@@ -1,35 +1,43 @@
-using CentroSalud.Domain.Interfaces;
+using CentroSalud.Application.Interfaces;
 using CentroSalud.Infrastructure;
+using CentroSalud.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using CentroSalud.Domain.Interfaces;
 using CentroSalud.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
+// Servicios
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddInfrastructure();
 
-// 🔌 Application
 builder.Services.AddScoped<IEmpleadoService, EmpleadoService>();
-//builder.Services.AddScoped<IMedicoService, MedicoService>();
-//builder.Services.AddScoped<ISustitucionService, SustitucionService>();
+builder.Services.AddScoped<IMedicoService, MedicoService>();
+builder.Services.AddScoped<IPacienteService, PacienteService>();
+builder.Services.AddScoped<ISustitucionService, SustitucionService>();
+builder.Services.AddScoped<IHorarioService, HorarioService>();
+builder.Services.AddScoped<IHorarioRepository, HorarioRepository>();
 
-// 🔌 Infrastructure
-builder.Services.AddInfrastructure(builder.Configuration);
-//builder.Services.AddScoped<CentroSalud.Domain.Interfaces.IMedicoRepository, MedicoRepository>();
-//builder.Services.AddScoped<ISustitucionRepository, SustitucionRepository>();
+// 🔐 Autorización
+builder.Services.AddAuthorization();
+
+// DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    ));
 
 var app = builder.Build();
 
-// Swagger
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Middleware
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+// 🔐 Orden correcto
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,4 +1,5 @@
 using CentroSalud.Application.DTOs.Paciente;
+using CentroSalud.Application.Interfaces;
 using CentroSalud.Domain.Entities;
 using CentroSalud.Domain.Interfaces;
 
@@ -19,8 +20,12 @@ public class PacienteService : IPacienteService
         {
             Id = p.Id,
             Nombre = p.Nombre,
+            Direccion = p.Direccion,
+            CodigoPostal = p.CodigoPostal,
+            NumeroSeguridadSocial = p.NumeroSeguridadSocial,
+            NIF = p.NIF,
             Telefono = p.Telefono,
-            MedicoId = p.MedicoId
+            MedicoId = p.MedicoId,
         }).ToList();
     }
 
@@ -43,8 +48,12 @@ public class PacienteService : IPacienteService
         var paciente = new Paciente
         {
             Nombre = dto.Nombre,
+            Direccion = dto.Direccion,
             Telefono = dto.Telefono,
-            MedicoId = dto.MedicoId
+            CodigoPostal = dto.CodigoPostal,
+            NIF = dto.NIF,
+            NumeroSeguridadSocial = dto.NumeroSeguridadSocial,
+            MedicoId = dto.MedicoId,
         };
 
         await _repo.AddAsync(paciente);
@@ -57,6 +66,11 @@ public class PacienteService : IPacienteService
 
         paciente.Nombre = dto.Nombre;
         paciente.Telefono = dto.Telefono;
+        paciente.MedicoId = dto.MedicoId;
+        paciente.Direccion = dto.Direccion;
+        paciente.CodigoPostal = dto.CodigoPostal;
+        paciente.NIF = dto.NIF;
+        paciente.NumeroSeguridadSocial = dto.NumeroSeguridadSocial;
 
         await _repo.UpdateAsync(paciente);
     }

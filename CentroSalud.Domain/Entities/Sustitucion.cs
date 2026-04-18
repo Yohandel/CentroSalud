@@ -1,17 +1,17 @@
 ﻿using CentroSalud.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace CentroSalud.Domain.Entities
 {
     public class Sustitucion : BaseEntity
     {
-        public int MedicoId { get; set; }
+        public int MedicoSustitutoId { get; set; }
+        public Medico MedicoSustituto { get; set; } = null!;
 
         public int MedicoReemplazadoId { get; set; }
+        public Medico MedicoReemplazado { get; set; } = null!;
 
-        public DateTime FechaAlta { get; set; }
-        public DateTime? FechaBaja { get; set; }
+        public DateTime FechaInicio { get; set; }
+        public DateTime? FechaFin { get; set; }
     }
 }

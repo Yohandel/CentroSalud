@@ -1,3 +1,5 @@
+using CentroSalud.Application.DTOs.Horario;
+
 namespace CentroSalud.Application.DTOs.Medico;
 
 public class CreateMedicoDto
@@ -12,4 +14,6 @@ public class CreateMedicoDto
     public string NumeroSeguridadSocial { get; set; } = "";
     public string NumeroColegiado { get; set; } = "";
     public int Tipo { get; set; }
+
+    public List<CreateHorarioDto> Horarios { get; set; } = new();
 }

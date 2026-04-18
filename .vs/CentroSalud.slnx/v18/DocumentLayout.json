@@ -3,112 +3,72 @@
   "WorkspaceRootPath": "D:\\Projects\\CentroSalud\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|d:\\projects\\centrosalud\\centrosalud.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|solutionrelative:centrosalud.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|d:\\projects\\centrosalud\\centrosalud.infrastructure\\repositories\\horariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|solutionrelative:centrosalud.infrastructure\\repositories\\horariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\sustitucionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\sustitucionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|d:\\projects\\centrosalud\\centrosalud.web\\controllers\\horariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|solutionrelative:centrosalud.web\\controllers\\horariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\medicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\medicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\interfaces\\isustitucionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\interfaces\\isustitucionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\interfaces\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\interfaces\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\interfaces\\imedicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\interfaces\\imedicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\imedicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\imedicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\isustitucionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\isustitucionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34F8C209-A170-5C9E-0D15-8B197F59676F}|CentroSalud.Domain\\CentroSalud.Domain.csproj|d:\\projects\\centrosalud\\centrosalud.domain\\interfaces\\imedicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34F8C209-A170-5C9E-0D15-8B197F59676F}|CentroSalud.Domain\\CentroSalud.Domain.csproj|solutionrelative:centrosalud.domain\\interfaces\\imedicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|d:\\projects\\centrosalud\\centrosalud.infrastructure\\repositories\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|solutionrelative:centrosalud.infrastructure\\repositories\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|d:\\projects\\centrosalud\\centrosalud.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|solutionrelative:centrosalud.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|d:\\projects\\centrosalud\\centrosalud.infrastructure\\repositories\\empleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|solutionrelative:centrosalud.infrastructure\\repositories\\empleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|d:\\projects\\centrosalud\\centrosalud.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|solutionrelative:centrosalud.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34F8C209-A170-5C9E-0D15-8B197F59676F}|CentroSalud.Domain\\CentroSalud.Domain.csproj|d:\\projects\\centrosalud\\centrosalud.domain\\interfaces\\iempleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34F8C209-A170-5C9E-0D15-8B197F59676F}|CentroSalud.Domain\\CentroSalud.Domain.csproj|solutionrelative:centrosalud.domain\\interfaces\\iempleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\iempleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\iempleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|d:\\projects\\centrosalud\\centrosalud.web\\controllers\\medicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|solutionrelative:centrosalud.web\\controllers\\medicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|d:\\projects\\centrosalud\\centrosalud.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|solutionrelative:centrosalud.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|d:\\projects\\centrosalud\\centrosalud.web\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|solutionrelative:centrosalud.web\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|d:\\projects\\centrosalud\\centrosalud.web\\centrosalud.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|solutionrelative:centrosalud.web\\centrosalud.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\dtos\\medico\\medicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\dtos\\medico\\medicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\horarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\horarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\dtos\\horario\\horariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\dtos\\horario\\horariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\dtos\\paciente\\updatepacientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\dtos\\paciente\\updatepacientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34F8C209-A170-5C9E-0D15-8B197F59676F}|CentroSalud.Domain\\CentroSalud.Domain.csproj|d:\\projects\\centrosalud\\centrosalud.domain\\interfaces\\ihorariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34F8C209-A170-5C9E-0D15-8B197F59676F}|CentroSalud.Domain\\CentroSalud.Domain.csproj|solutionrelative:centrosalud.domain\\interfaces\\ihorariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\dtos\\medico\\updatemedicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\dtos\\medico\\updatemedicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|d:\\projects\\centrosalud\\centrosalud.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|solutionrelative:centrosalud.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\dtos\\empleado\\updateempleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\dtos\\empleado\\updateempleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|d:\\projects\\centrosalud\\centrosalud.web\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|solutionrelative:centrosalud.web\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|d:\\projects\\centrosalud\\centrosalud.web\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4EDA6AE-3607-40C3-9586-456599301265}|CentroSalud.Web\\CentroSalud.Web.csproj|solutionrelative:centrosalud.web\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\interfaces\\ihorarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\interfaces\\ihorarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\interfaces\\imedicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\interfaces\\imedicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\interfaces\\iempleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\interfaces\\iempleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\medicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\medicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\dtos\\medico\\createmedicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\dtos\\medico\\createmedicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\dtos\\medico\\medicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\dtos\\medico\\medicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|d:\\projects\\centrosalud\\centrosalud.infrastructure\\repositories\\empleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{386C5274-7CA2-AF7B-D7D3-829738D51177}|CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj|solutionrelative:centrosalud.infrastructure\\repositories\\empleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34F8C209-A170-5C9E-0D15-8B197F59676F}|CentroSalud.Domain\\CentroSalud.Domain.csproj|d:\\projects\\centrosalud\\centrosalud.domain\\interfaces\\iempleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34F8C209-A170-5C9E-0D15-8B197F59676F}|CentroSalud.Domain\\CentroSalud.Domain.csproj|solutionrelative:centrosalud.domain\\interfaces\\iempleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|d:\\projects\\centrosalud\\centrosalud.application\\services\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F56BA42-4F37-50DB-57EA-C09792F1934D}|CentroSalud.Application\\CentroSalud.Application.csproj|solutionrelative:centrosalud.application\\services\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,358 +78,216 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 15,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EmpleadoRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Repositories\\EmpleadoRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Infrastructure\\Repositories\\EmpleadoRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Repositories\\EmpleadoRepository.cs",
-              "RelativeToolTip": "CentroSalud.Infrastructure\\Repositories\\EmpleadoRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:46:39.19Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Program.cs",
               "RelativeDocumentMoniker": "CentroSalud.Web\\Program.cs",
               "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Program.cs",
               "RelativeToolTip": "CentroSalud.Web\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:34:18.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IMedicoRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IMedicoRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Interfaces\\IMedicoRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IMedicoRepository.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Interfaces\\IMedicoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:33:03.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPacienteRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IPacienteRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Interfaces\\IPacienteRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IPacienteRepository.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Interfaces\\IPacienteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:33:28.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ISustitucionRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\ISustitucionRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Interfaces\\ISustitucionRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\ISustitucionRepository.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Interfaces\\ISustitucionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:33:31.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MedicoService.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\MedicoService.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\MedicoService.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\MedicoService.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Services\\MedicoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:48:30.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SustitucionService.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\SustitucionService.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\SustitucionService.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\SustitucionService.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Services\\SustitucionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:57:29.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ISustitucionRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\ISustitucionRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\ISustitucionRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\ISustitucionRepository.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Services\\ISustitucionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:57:35.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IPacienteRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\IPacienteRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\IPacienteRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\IPacienteRepository.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Services\\IPacienteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:57:02.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IMedicoRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\Interfaces\\IMedicoRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Domain\\Interfaces\\IMedicoRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\Interfaces\\IMedicoRepository.cs",
-              "RelativeToolTip": "CentroSalud.Domain\\Interfaces\\IMedicoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T07:30:33.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T07:38:42.49Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IMedicoRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\IMedicoRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\IMedicoRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\IMedicoRepository.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Services\\IMedicoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T07:41:53.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MedicoRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Repositories\\MedicoRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Infrastructure\\Repositories\\MedicoRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Repositories\\MedicoRepository.cs",
-              "RelativeToolTip": "CentroSalud.Infrastructure\\Repositories\\MedicoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T07:29:38.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "CentroSalud.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAlwBUAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T07:26:22.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IEmpleadoRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\Interfaces\\IEmpleadoRepository.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Domain\\Interfaces\\IEmpleadoRepository.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\Interfaces\\IEmpleadoRepository.cs",
-              "RelativeToolTip": "CentroSalud.Domain\\Interfaces\\IEmpleadoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:32:31.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "CentroSalud.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAhwA8AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T07:02:34.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IEmpleadoService.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\IEmpleadoService.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\IEmpleadoService.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\IEmpleadoService.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Services\\IEmpleadoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:48:03.079Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MedicoController.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Controllers\\MedicoController.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Web\\Controllers\\MedicoController.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Controllers\\MedicoController.cs",
-              "RelativeToolTip": "CentroSalud.Web\\Controllers\\MedicoController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T07:19:53.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "CentroSalud.Web\\appsettings.json",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\appsettings.json",
-              "RelativeToolTip": "CentroSalud.Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-11T06:43:00.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EmpleadoService.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\EmpleadoService.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\EmpleadoService.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\EmpleadoService.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Services\\EmpleadoService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:45:50.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
               "Title": "EmpleadoController.cs",
               "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Controllers\\EmpleadoController.cs",
               "RelativeDocumentMoniker": "CentroSalud.Web\\Controllers\\EmpleadoController.cs",
               "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Controllers\\EmpleadoController.cs",
               "RelativeToolTip": "CentroSalud.Web\\Controllers\\EmpleadoController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:28:22.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T07:35:18.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CentroSalud.Web",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj",
-              "RelativeDocumentMoniker": "CentroSalud.Web\\CentroSalud.Web.csproj",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj",
-              "RelativeToolTip": "CentroSalud.Web\\CentroSalud.Web.csproj",
+              "DocumentIndex": 10,
+              "Title": "IEmpleadoService.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IEmpleadoService.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Application\\Interfaces\\IEmpleadoService.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IEmpleadoService.cs",
+              "RelativeToolTip": "CentroSalud.Application\\Interfaces\\IEmpleadoService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-11T06:58:45.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "PacienteService.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\PacienteService.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\PacienteService.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\PacienteService.cs",
-              "RelativeToolTip": "CentroSalud.Application\\Services\\PacienteService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwAYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:56:34.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T07:34:06.836Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 9,
+              "Title": "IMedicoService.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IMedicoService.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Application\\Interfaces\\IMedicoService.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IMedicoService.cs",
+              "RelativeToolTip": "CentroSalud.Application\\Interfaces\\IMedicoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:34:00.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MedicoService.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\MedicoService.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\MedicoService.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\MedicoService.cs",
+              "RelativeToolTip": "CentroSalud.Application\\Services\\MedicoService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAhwBsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:32:26.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "MedicoDto.cs",
               "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Medico\\MedicoDto.cs",
               "RelativeDocumentMoniker": "CentroSalud.Application\\DTOs\\Medico\\MedicoDto.cs",
               "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Medico\\MedicoDto.cs",
               "RelativeToolTip": "CentroSalud.Application\\DTOs\\Medico\\MedicoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:44:01.911Z"
+              "WhenOpened": "2026-04-18T07:32:14.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 12,
+              "Title": "CreateMedicoDto.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Medico\\CreateMedicoDto.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Application\\DTOs\\Medico\\CreateMedicoDto.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Medico\\CreateMedicoDto.cs",
+              "RelativeToolTip": "CentroSalud.Application\\DTOs\\Medico\\CreateMedicoDto.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA9wBEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:32:07.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IHorarioService.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IHorarioService.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Application\\Interfaces\\IHorarioService.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Interfaces\\IHorarioService.cs",
+              "RelativeToolTip": "CentroSalud.Application\\Interfaces\\IHorarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:30:45.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HorarioDto.cs",
               "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Horario\\HorarioDto.cs",
               "RelativeDocumentMoniker": "CentroSalud.Application\\DTOs\\Horario\\HorarioDto.cs",
               "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Horario\\HorarioDto.cs",
               "RelativeToolTip": "CentroSalud.Application\\DTOs\\Horario\\HorarioDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA5wA4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:45:29.092Z"
+              "WhenOpened": "2026-04-18T07:30:05.91Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UpdatePacienteDto.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Paciente\\UpdatePacienteDto.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\DTOs\\Paciente\\UpdatePacienteDto.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Paciente\\UpdatePacienteDto.cs",
-              "RelativeToolTip": "CentroSalud.Application\\DTOs\\Paciente\\UpdatePacienteDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "PacienteController.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Controllers\\PacienteController.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Web\\Controllers\\PacienteController.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Controllers\\PacienteController.cs",
+              "RelativeToolTip": "CentroSalud.Web\\Controllers\\PacienteController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwDYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:31:41.419Z"
+              "WhenOpened": "2026-04-18T07:28:49.185Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UpdateMedicoDto.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Medico\\UpdateMedicoDto.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\DTOs\\Medico\\UpdateMedicoDto.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Medico\\UpdateMedicoDto.cs",
-              "RelativeToolTip": "CentroSalud.Application\\DTOs\\Medico\\UpdateMedicoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "HorarioController.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Controllers\\HorarioController.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Web\\Controllers\\HorarioController.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\Controllers\\HorarioController.cs",
+              "RelativeToolTip": "CentroSalud.Web\\Controllers\\HorarioController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:31:17.938Z"
+              "WhenOpened": "2026-04-18T07:28:14.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "UpdateEmpleadoDto.cs",
-              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Empleado\\UpdateEmpleadoDto.cs",
-              "RelativeDocumentMoniker": "CentroSalud.Application\\DTOs\\Empleado\\UpdateEmpleadoDto.cs",
-              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\DTOs\\Empleado\\UpdateEmpleadoDto.cs",
-              "RelativeToolTip": "CentroSalud.Application\\DTOs\\Empleado\\UpdateEmpleadoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "IEmpleadoRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\Interfaces\\IEmpleadoRepository.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Domain\\Interfaces\\IEmpleadoRepository.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\Interfaces\\IEmpleadoRepository.cs",
+              "RelativeToolTip": "CentroSalud.Domain\\Interfaces\\IEmpleadoRepository.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T06:30:32.083Z"
+              "WhenOpened": "2026-04-18T07:26:42.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IHorarioRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\Interfaces\\IHorarioRepository.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Domain\\Interfaces\\IHorarioRepository.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\Interfaces\\IHorarioRepository.cs",
+              "RelativeToolTip": "CentroSalud.Domain\\Interfaces\\IHorarioRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAywAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:27:11.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EmpleadoRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Repositories\\EmpleadoRepository.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Infrastructure\\Repositories\\EmpleadoRepository.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Repositories\\EmpleadoRepository.cs",
+              "RelativeToolTip": "CentroSalud.Infrastructure\\Repositories\\EmpleadoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:25:54.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HorarioRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Repositories\\HorarioRepository.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Infrastructure\\Repositories\\HorarioRepository.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\Repositories\\HorarioRepository.cs",
+              "RelativeToolTip": "CentroSalud.Infrastructure\\Repositories\\HorarioRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAewB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:25:50.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EmpleadoService.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\EmpleadoService.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\EmpleadoService.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\EmpleadoService.cs",
+              "RelativeToolTip": "CentroSalud.Application\\Services\\EmpleadoService.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAuwE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:22:27.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HorarioService.cs",
+              "DocumentMoniker": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\HorarioService.cs",
+              "RelativeDocumentMoniker": "CentroSalud.Application\\Services\\HorarioService.cs",
+              "ToolTip": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\Services\\HorarioService.cs",
+              "RelativeToolTip": "CentroSalud.Application\\Services\\HorarioService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAmwDIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:22:19.236Z"
             }
           ]
         }

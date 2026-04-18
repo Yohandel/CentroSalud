@@ -21,6 +21,9 @@ public class EmpleadoService : IEmpleadoService
             Id = e.Id,
             Nombre = e.Nombre,
             Telefono = e.Telefono,
+            Direccion = e.Direccion,
+            Poblacion = e.Poblacion,
+            Provincia = e.Provincia,
             Tipo = e.Tipo.ToString()
         }).ToList();
     }
@@ -46,6 +49,11 @@ public class EmpleadoService : IEmpleadoService
             Nombre = dto.Nombre,
             Direccion = dto.Direccion,
             Telefono = dto.Telefono,
+            Poblacion = dto.Poblacion,
+            Provincia = dto.Provincia,
+            CodigoPostal = dto.CodigoPostal,
+            NIF = dto.NIF,
+            NumeroSeguridadSocial = dto.NumeroSeguridadSocial,
             Tipo = (CentroSalud.Domain.Enums.TipoEmpleado)dto.Tipo
         };
 
@@ -67,10 +75,5 @@ public class EmpleadoService : IEmpleadoService
     public async Task DeleteAsync(int id)
     {
         await _repo.DeleteAsync(id);
-    }
-
-    Task<IEnumerable<EmpleadoDto>> IEmpleadoService.GetAllAsync()
-    {
-        throw new NotImplementedException();
     }
 }

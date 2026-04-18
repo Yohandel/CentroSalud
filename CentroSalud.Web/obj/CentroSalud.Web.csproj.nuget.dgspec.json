@@ -34,6 +34,9 @@
             "projectReferences": {
               "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj": {
                 "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj"
+              },
+              "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj": {
+                "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj"
               }
             }
           }
@@ -738,17 +741,23 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[10.0.5, )"
+              "version": "[10.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[10.0.5, )"
+              "version": "[10.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.5, )"
+              "version": "[10.0.6, )"
             }
           },
           "imports": [

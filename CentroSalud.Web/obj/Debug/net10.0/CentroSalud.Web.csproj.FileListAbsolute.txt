@@ -82,3 +82,4 @@ D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\CentroSalud.Web.pdb
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\CentroSalud.Web.genruntimeconfig.cache
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\ref\CentroSalud.Web.dll
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\CentroSalud.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\CentroSalud.Web.sourcelink.json

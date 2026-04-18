@@ -15,5 +15,6 @@ namespace CentroSalud.Domain.Entities
         public string NumeroSeguridadSocial { get; set; } = "";
 
         public int MedicoId { get; set; }
+        public Medico Medico { get; set; } = null!;
     }
 }

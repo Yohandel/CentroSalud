@@ -11,7 +11,7 @@ namespace CentroSalud.Domain.Entities
         public DateTime FechaFin { get; set; }
 
         // Puede pertenecer a médico o empleado
-        public int? MedicoId { get; set; }
+        public int MedicoId { get; set; }
         public int? EmpleadoId { get; set; }
     }
 }

@@ -23,7 +23,8 @@ namespace CentroSalud.Domain.Entities
 
         // Relaciones
         public List<Horario> Horarios { get; set; } = new();
-        public List<Sustitucion> Sustituciones { get; set; } = new();
+        public List<Sustitucion> SustitucionesComoSustituto { get; set; } = new();
+        public List<Sustitucion> SustitucionesComoReemplazado { get; set; } = new();
         public List<Vacacion> Vacaciones { get; set; } = new();
     }
 }

@@ -1,13 +1,12 @@
 ﻿using CentroSalud.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CentroSalud.Domain.Entities
 {
     public class Horario : BaseEntity
     {
         public int MedicoId { get; set; }
+
+        public Medico Medico { get; set; } = null!; // 🔥 IMPORTANTE
 
         public DayOfWeek Dia { get; set; }
 

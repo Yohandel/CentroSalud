@@ -5,6 +5,7 @@ D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.
 D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.AssemblyInfoInputs.cache
 D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.AssemblyInfo.cs
 D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.sourcelink.json
 D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.dll
 D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\refint\CentroSalud.Domain.dll
 D:\Projects\CentroSalud\CentroSalud.Domain\obj\Debug\net10.0\CentroSalud.Domain.pdb

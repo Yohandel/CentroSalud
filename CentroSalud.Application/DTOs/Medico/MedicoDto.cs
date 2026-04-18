@@ -1,4 +1,6 @@
-﻿namespace CentroSalud.Application.DTOs.Medico;
+﻿using CentroSalud.Application.DTOs.Horario;
+
+namespace CentroSalud.Application.DTOs.Medico;
 public class MedicoDto
 {
     public int Id { get; set; }

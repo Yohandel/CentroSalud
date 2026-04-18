@@ -1,4 +1,6 @@
+using CentroSalud.Application.DTOs.Horario;
 using CentroSalud.Application.DTOs.Medico;
+using CentroSalud.Application.Interfaces;
 using CentroSalud.Domain.Entities;
 using CentroSalud.Domain.Interfaces;
 
@@ -17,11 +19,24 @@ public class MedicoService : IMedicoService
 
         return medicos.Select(m => new MedicoDto
         {
+
+
             Id = m.Id,
             Nombre = m.Nombre,
             Telefono = m.Telefono,
-            Tipo = m.Tipo.ToString()
+            Tipo = m.Tipo.ToString(),
+               Horarios = m.Horarios.Select(h => new HorarioDto
+               {
+
+                   Id = h.Id,
+                   Dia = h.Dia.ToString(),
+                   HoraInicio = h.HoraInicio.ToString(),
+                   HoraFin = h.HoraFin.ToString()
+
+
+               }).ToList()
         }).ToList();
+
     }
 
     public async Task<MedicoDto?> GetByIdAsync(int id)
@@ -45,7 +60,27 @@ public class MedicoService : IMedicoService
             Nombre = dto.Nombre,
             Direccion = dto.Direccion,
             Telefono = dto.Telefono,
-            Tipo = (CentroSalud.Domain.Enums.TipoMedico)dto.Tipo
+            Poblacion = dto.Poblacion,
+            Provincia = dto.Provincia,
+            CodigoPostal = dto.CodigoPostal,
+            NIF = dto.NIF,
+            NumeroSeguridadSocial = dto.NumeroSeguridadSocial,
+            NumeroColegiado = dto.NumeroColegiado,
+            Tipo = (CentroSalud.Domain.Enums.TipoMedico)dto.Tipo,
+
+        Horarios = dto.Horarios.Select(h =>
+        {
+            if (h.HoraInicio >= h.HoraFin)
+                throw new ArgumentException("HoraInicio debe ser menor que HoraFin");
+
+            return new Horario
+            {
+                Dia = h.Dia,
+                HoraInicio = h.HoraInicio,
+                HoraFin = h.HoraFin
+            };
+        }).ToList()
+
         };
 
         await _repo.AddAsync(medico);
@@ -57,6 +92,7 @@ public class MedicoService : IMedicoService
         if (medico == null) throw new Exception("Médico no encontrado");
 
         medico.Nombre = dto.Nombre;
+        medico.Direccion = dto.Direccion;
         medico.Telefono = dto.Telefono;
 
         await _repo.UpdateAsync(medico);
@@ -66,4 +102,5 @@ public class MedicoService : IMedicoService
     {
         await _repo.DeleteAsync(id);
     }
+
 }
