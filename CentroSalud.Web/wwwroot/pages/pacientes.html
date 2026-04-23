@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pacientes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Gestión de Pacientes</h1>
+
+        <button id="btnCargar">Ver Pacientes</button>
+
+        <h2>Crear / Editar Paciente</h2>
+
+        <input id="nombre" placeholder="Nombre">
+        <input id="edad" placeholder="Edad">
+        <input id="telefono" placeholder="Teléfono">
+
+        <button id="btnGuardar">Guardar</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+        </table>
+
+    </div>
+
+    <!-- ORDEN CORRECTO -->
+    <script src="/js/data.js"></script>
+    <script src="/js/pacientes.js"></script>
+
+</body>
+
+</html>

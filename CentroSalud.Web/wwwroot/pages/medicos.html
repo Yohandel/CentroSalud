@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Médicos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Gestión de Médicos</h1>
+
+        <div class="section">
+            <button id="btnCargar">Ver Médicos</button>
+        </div>
+
+        <div class="section">
+            <h2>Crear / Editar Médico</h2>
+            <input id="nombre" placeholder="Nombre del médico">
+            <button id="btnGuardar">Guardar</button>
+        </div>
+
+        <div class="section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/medicos.js"></script>
+
+</body>
+</html>

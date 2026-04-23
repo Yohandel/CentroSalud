@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CentroSalud.Application/CentroSalud.Application.csproj" />
+  <Project Path="CentroSalud.Domain/CentroSalud.Domain.csproj" />
+  <Project Path="CentroSalud.Infrastructure/CentroSalud.Infrastructure.csproj" />
+  <Project Path="CentroSalud.Web/CentroSalud.Web.csproj" Id="a4eda6ae-3607-40c3-9586-456599301265" />
+</Solution>
