@@ -24,7 +24,7 @@ public class MedicoController : ControllerBase
     // =========================
 
     // GET: api/medico
-    [HttpGet]
+    [HttpGet("GetAll")]
     public async Task<IActionResult> GetAll()
     {
         var medicos = await _medicoService.GetAllAsync();
@@ -32,7 +32,7 @@ public class MedicoController : ControllerBase
     }
 
     // GET: api/medico/5
-    [HttpGet("{id}")]
+    [HttpGet("GetById/{id}")]
     public async Task<IActionResult> GetById(int id)
     {
         var medico = await _medicoService.GetByIdAsync(id);
@@ -43,8 +43,8 @@ public class MedicoController : ControllerBase
         return Ok(medico);
     }
 
-    // POST: api/medico
-    [HttpPost]
+    // POST: api/medico/Create
+    [HttpPost("Create")]
     public async Task<IActionResult> Create([FromBody] CreateMedicoDto dto)
     {
         await _medicoService.CreateAsync(dto);
@@ -52,7 +52,7 @@ public class MedicoController : ControllerBase
     }
 
     // PUT: api/medico/5
-    [HttpPut("{id}")]
+    [HttpPut("Update/{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateMedicoDto dto)
     {
         await _medicoService.UpdateAsync(id, dto);
@@ -60,7 +60,7 @@ public class MedicoController : ControllerBase
     }
 
     // DELETE: api/medico/5
-    [HttpDelete("{id}")]
+    [HttpDelete("Delete/{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         await _medicoService.DeleteAsync(id);
@@ -87,13 +87,32 @@ public class MedicoController : ControllerBase
     // SUSTITUCIONES
     // =========================
 
+    // Get: api/medico/GetSustituciones
+    [HttpGet("GetSustituciones")]
+    public async Task<IActionResult> GetSustituciones()
+    {
+        var sustituciones = await _sustitucionService.GetSustitucionesVigentesAsync();
+        return Ok(sustituciones);
+    }
+    // GET: api/medico/5/sustituciones
+    [HttpGet("{id}/sustituciones")]
+    public async Task<IActionResult> GetSustituciones(int id)
+    {
+        var medico = await _medicoService.GetByIdAsync(id);
+
+        if (medico == null)
+            return NotFound();
+
+        return Ok(medico.Sustituciones);
+    }
+
+
     // POST: api/medico/sustitucion
     [HttpPost("sustitucion")]
-    public async Task<IActionResult> AsignarSustitucion(
-        int medicoId,
-        int reemplazadoId)
+
+    public async Task<IActionResult> AsignarSustitucion([FromBody] SustitucionDto dto)
     {
-        await _sustitucionService.AsignarAsync(medicoId, reemplazadoId);
+        await _sustitucionService.AsignarAsync(dto);
 
         return Ok(new { message = "Sustitución asignada correctamente" });
     }

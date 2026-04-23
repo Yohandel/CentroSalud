@@ -1,3 +1,4 @@
+using CentroSalud.Application.DTOs.Medico;
 using CentroSalud.Application.Interfaces;
 using CentroSalud.Domain.Entities;
 using CentroSalud.Domain.Interfaces;
@@ -11,17 +12,31 @@ public class SustitucionService : ISustitucionService
         _repo = repo;
     }
 
-    public async Task AsignarAsync(int medicoId, int reemplazadoId)
+    public async Task<IEnumerable<SustitucionDto>> GetSustitucionesVigentesAsync() 
     {
-        if (medicoId == reemplazadoId)
+        var sustituciones = await _repo.GetAllAsync();
+        return sustituciones.Select(s => new SustitucionDto
+        {
+            MedicoId = s.MedicoSustitutoId,
+            MedicoReemplazadoId = s.MedicoReemplazadoId,
+            FechaAlta = s.FechaInicio,
+            FechaBaja = s.FechaFin
+        }).ToList();
+    }
+
+    public async Task AsignarAsync(SustitucionDto dto)
+    {
+        if (dto.MedicoId == dto.MedicoReemplazadoId)
             throw new Exception("No puede sustituirse a sí mismo");
 
         var sustitucion = new Sustitucion
         {
-            MedicoSustitutoId = medicoId,
-            MedicoReemplazadoId = reemplazadoId,
-            FechaInicio = DateTime.Now
+            MedicoSustitutoId = dto.MedicoId,
+            MedicoReemplazadoId = dto.MedicoReemplazadoId,
+            FechaInicio = dto.FechaAlta,
+            FechaFin = dto.FechaBaja
         };
+        if (dto.FechaBaja <= dto.FechaAlta) { throw new Exception("La fecha de fin debe ser posterior a la fecha de inicio"); }
 
         await _repo.AddAsync(sustitucion);
     }

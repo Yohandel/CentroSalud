@@ -25,16 +25,7 @@ public class MedicoService : IMedicoService
             Nombre = m.Nombre,
             Telefono = m.Telefono,
             Tipo = m.Tipo.ToString(),
-               Horarios = m.Horarios.Select(h => new HorarioDto
-               {
-
-                   Id = h.Id,
-                   Dia = h.Dia.ToString(),
-                   HoraInicio = h.HoraInicio.ToString(),
-                   HoraFin = h.HoraFin.ToString()
-
-
-               }).ToList()
+              
         }).ToList();
 
     }
@@ -49,7 +40,24 @@ public class MedicoService : IMedicoService
             Id = m.Id,
             Nombre = m.Nombre,
             Telefono = m.Telefono,
-            Tipo = m.Tipo.ToString()
+            Tipo = m.Tipo.ToString(),
+             Horarios = m.Horarios.Select(h => new HorarioDto
+             {
+
+                 Id = h.Id,
+                 Dia = h.Dia.ToString(),
+                 HoraInicio = h.HoraInicio.ToString(),
+                 HoraFin = h.HoraFin.ToString()
+
+
+             }).ToList(),
+                Sustituciones = m.SustitucionesComoSustituto.Select(s => new SustitucionDto
+                {
+                    MedicoId = s.Id,
+                    MedicoReemplazadoId = s.MedicoReemplazadoId,
+                    FechaAlta = s.FechaInicio,
+                    FechaBaja = s.FechaFin
+                }).ToList()
         };
     }
 

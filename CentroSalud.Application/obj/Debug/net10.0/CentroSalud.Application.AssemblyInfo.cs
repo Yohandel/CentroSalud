@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CentroSalud.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66b08b0631facfa9cabc5c7ba7e928550ad7b706")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1290986277f7594dc40c3d437148f41f3c5db4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CentroSalud.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CentroSalud.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

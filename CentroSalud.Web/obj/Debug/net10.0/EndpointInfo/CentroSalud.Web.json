@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Empleado": {
+    "/api/Empleado/GetAll": {
       "get": {
         "tags": [
           "Empleado"
@@ -15,7 +15,32 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Empleado/GetById/{id}": {
+      "get": {
+        "tags": [
+          "Empleado"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Empleado/Create": {
       "post": {
         "tags": [
           "Empleado"
@@ -46,28 +71,7 @@
         }
       }
     },
-    "/api/Empleado/{id}": {
-      "get": {
-        "tags": [
-          "Empleado"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
+    "/api/Empleado/Update/{id}": {
       "put": {
         "tags": [
           "Empleado"
@@ -107,7 +111,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Empleado/Delete/{id}": {
       "delete": {
         "tags": [
           "Empleado"
@@ -130,7 +136,7 @@
         }
       }
     },
-    "/api/Horario": {
+    "/api/Horario/GetAll": {
       "get": {
         "tags": [
           "Horario"
@@ -166,38 +172,9 @@
             }
           }
         }
-      },
-      "post": {
-        "tags": [
-          "Horario"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateHorarioDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateHorarioDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateHorarioDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
       }
     },
-    "/api/Horario/{id}": {
+    "/api/Horario/GetById/{id}": {
       "get": {
         "tags": [
           "Horario"
@@ -235,7 +212,40 @@
             }
           }
         }
-      },
+      }
+    },
+    "/api/Horario/Create": {
+      "post": {
+        "tags": [
+          "Horario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHorarioDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHorarioDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateHorarioDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Horario/Update/{id}": {
       "put": {
         "tags": [
           "Horario"
@@ -275,7 +285,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Horario/Delete/{id}": {
       "delete": {
         "tags": [
           "Horario"
@@ -298,7 +310,7 @@
         }
       }
     },
-    "/api/Medico": {
+    "/api/Medico/GetAll": {
       "get": {
         "tags": [
           "Medico"
@@ -308,7 +320,32 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Medico/GetById/{id}": {
+      "get": {
+        "tags": [
+          "Medico"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Medico/Create": {
       "post": {
         "tags": [
           "Medico"
@@ -339,28 +376,7 @@
         }
       }
     },
-    "/api/Medico/{id}": {
-      "get": {
-        "tags": [
-          "Medico"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
+    "/api/Medico/Update/{id}": {
       "put": {
         "tags": [
           "Medico"
@@ -400,7 +416,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Medico/Delete/{id}": {
       "delete": {
         "tags": [
           "Medico"
@@ -446,29 +464,65 @@
         }
       }
     },
-    "/api/Medico/sustitucion": {
-      "post": {
+    "/api/Medico/GetSustituciones": {
+      "get": {
+        "tags": [
+          "Medico"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Medico/{id}/sustituciones": {
+      "get": {
         "tags": [
           "Medico"
         ],
         "parameters": [
           {
-            "name": "medicoId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "reemplazadoId",
-            "in": "query",
+            "name": "id",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Medico/sustitucion": {
+      "post": {
+        "tags": [
+          "Medico"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SustitucionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SustitucionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SustitucionDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -928,6 +982,29 @@
           "medicoId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SustitucionDto": {
+        "type": "object",
+        "properties": {
+          "medicoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "medicoReemplazadoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaAlta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaBaja": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
