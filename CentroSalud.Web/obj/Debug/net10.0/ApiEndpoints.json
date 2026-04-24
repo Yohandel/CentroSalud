@@ -1,18 +1,8 @@
 [
   {
     "ContainingType": "CentroSalud.Web.Controllers.EmpleadoController",
-    "Method": "GetAll",
-    "RelativePath": "api/Empleado",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CentroSalud.Web.Controllers.EmpleadoController",
     "Method": "Create",
-    "RelativePath": "api/Empleado",
+    "RelativePath": "api/Empleado/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -27,8 +17,34 @@
   },
   {
     "ContainingType": "CentroSalud.Web.Controllers.EmpleadoController",
+    "Method": "Delete",
+    "RelativePath": "api/Empleado/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.EmpleadoController",
+    "Method": "GetAll",
+    "RelativePath": "api/Empleado/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.EmpleadoController",
     "Method": "GetById",
-    "RelativePath": "api/Empleado/{id}",
+    "RelativePath": "api/Empleado/GetById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +60,7 @@
   {
     "ContainingType": "CentroSalud.Web.Controllers.EmpleadoController",
     "Method": "Update",
-    "RelativePath": "api/Empleado/{id}",
+    "RelativePath": "api/Empleado/Update/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -63,9 +79,25 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CentroSalud.Web.Controllers.EmpleadoController",
+    "ContainingType": "CentroSalud.Web.Controllers.HorarioController",
+    "Method": "Create",
+    "RelativePath": "api/Horario/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CentroSalud.Application.DTOs.Horario.CreateHorarioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.HorarioController",
     "Method": "Delete",
-    "RelativePath": "api/Empleado/{id}",
+    "RelativePath": "api/Horario/Delete/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -81,7 +113,7 @@
   {
     "ContainingType": "CentroSalud.Web.Controllers.HorarioController",
     "Method": "Get",
-    "RelativePath": "api/Horario",
+    "RelativePath": "api/Horario/GetAll",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -100,24 +132,8 @@
   },
   {
     "ContainingType": "CentroSalud.Web.Controllers.HorarioController",
-    "Method": "Create",
-    "RelativePath": "api/Horario",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "CentroSalud.Application.DTOs.Horario.CreateHorarioDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CentroSalud.Web.Controllers.HorarioController",
     "Method": "Get",
-    "RelativePath": "api/Horario/{id}",
+    "RelativePath": "api/Horario/GetById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -143,7 +159,7 @@
   {
     "ContainingType": "CentroSalud.Web.Controllers.HorarioController",
     "Method": "Update",
-    "RelativePath": "api/Horario/{id}",
+    "RelativePath": "api/Horario/Update/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -156,101 +172,6 @@
       {
         "Name": "dto",
         "Type": "CentroSalud.Application.DTOs.Horario.UpdateHorarioDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CentroSalud.Web.Controllers.HorarioController",
-    "Method": "Delete",
-    "RelativePath": "api/Horario/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
-    "Method": "GetAll",
-    "RelativePath": "api/Medico",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
-    "Method": "Create",
-    "RelativePath": "api/Medico",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "CentroSalud.Application.DTOs.Medico.CreateMedicoDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
-    "Method": "GetById",
-    "RelativePath": "api/Medico/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
-    "Method": "Update",
-    "RelativePath": "api/Medico/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "CentroSalud.Application.DTOs.Medico.UpdateMedicoDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
-    "Method": "Delete",
-    "RelativePath": "api/Medico/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -274,6 +195,90 @@
   },
   {
     "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
+    "Method": "GetSustituciones",
+    "RelativePath": "api/Medico/{id}/sustituciones",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
+    "Method": "Create",
+    "RelativePath": "api/Medico/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CentroSalud.Application.DTOs.Medico.CreateMedicoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
+    "Method": "Delete",
+    "RelativePath": "api/Medico/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
+    "Method": "GetAll",
+    "RelativePath": "api/Medico/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
+    "Method": "GetById",
+    "RelativePath": "api/Medico/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
+    "Method": "GetSustituciones",
+    "RelativePath": "api/Medico/GetSustituciones",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
     "Method": "AsignarSustitucion",
     "RelativePath": "api/Medico/sustitucion",
     "HttpMethod": "POST",
@@ -281,14 +286,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "medicoId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "reemplazadoId",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "dto",
+        "Type": "CentroSalud.Application.DTOs.Medico.SustitucionDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -304,6 +304,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CentroSalud.Web.Controllers.MedicoController",
+    "Method": "Update",
+    "RelativePath": "api/Medico/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CentroSalud.Application.DTOs.Medico.UpdateMedicoDto",
         "IsRequired": true
       }
     ],

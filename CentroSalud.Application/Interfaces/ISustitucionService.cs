@@ -1,8 +1,12 @@
-﻿namespace CentroSalud.Application.Interfaces;
+﻿using CentroSalud.Application.DTOs.Medico;
+
+namespace CentroSalud.Application.Interfaces;
 
 public interface ISustitucionService
 {
-    Task AsignarAsync(int medicoId, int reemplazadoId);
+    Task AsignarAsync(SustitucionDto dto);
 
     Task FinalizarAsync(int sustitucionId);
+
+    Task<IEnumerable<SustitucionDto>> GetSustitucionesVigentesAsync();    
 }

@@ -9,4 +9,5 @@ public class MedicoDto
     public string Tipo { get; set; } = "";
 
     public List<HorarioDto> Horarios { get; set; } = new();
+    public List<SustitucionDto> Sustituciones { get; set; } = new();
 }

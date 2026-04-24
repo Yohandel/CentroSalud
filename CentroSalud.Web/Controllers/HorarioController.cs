@@ -1,7 +1,4 @@
-﻿using CentroSalud.Application.DTOs;
-using CentroSalud.Application.DTOs.Horario;
-using CentroSalud.Application.DTOs.Medico;
-using CentroSalud.Application.DTOs.Paciente;
+﻿using CentroSalud.Application.DTOs.Horario;
 using CentroSalud.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,21 +18,21 @@ namespace CentroSalud.Web.Controllers
         }
 
         // GET: api/<HorarioController>
-        [HttpGet]
+        [HttpGet("GetAll")]
         public async Task<IEnumerable<HorarioDto>> Get()
         {
             return await _service.GetAllAsync();
         }
 
         // GET api/<HorarioController>/5
-        [HttpGet("{id}")]
+        [HttpGet("GetById/{id}")]
         public async Task<HorarioDto?> Get(int id)
         {
             return await _service.GetByIdAsync(id);
         }
 
         // POST api/<HorarioController>
-        [HttpPost]
+        [HttpPost("Create")]
         public async Task<IActionResult> Create([FromBody] CreateHorarioDto dto)
         {
             await _service.CreateAsync(dto);
@@ -43,7 +40,7 @@ namespace CentroSalud.Web.Controllers
         }
 
         // PUT api/<HorarioController>/5
-        [HttpPut("{id}")]
+        [HttpPut("Update/{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateHorarioDto dto)
         {
             await _service.UpdateAsync(id, dto);
@@ -51,7 +48,7 @@ namespace CentroSalud.Web.Controllers
         }
 
         // DELETE api/<HorarioController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.DeleteAsync(id);

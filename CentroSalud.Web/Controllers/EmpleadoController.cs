@@ -16,7 +16,7 @@ public class EmpleadoController : ControllerBase
     }
 
     // GET: api/empleado
-    [HttpGet]
+    [HttpGet("GetAll")]
     public async Task<IActionResult> GetAll()
     {
         var empleados = await _service.GetAllAsync();
@@ -24,7 +24,7 @@ public class EmpleadoController : ControllerBase
     }
 
     // GET: api/empleado/5
-    [HttpGet("{id}")]
+    [HttpGet("GetById/{id}")]
     public async Task<IActionResult> GetById(int id)
     {
         var empleado = await _service.GetByIdAsync(id);
@@ -36,7 +36,7 @@ public class EmpleadoController : ControllerBase
     }
 
     // POST: api/empleado
-    [HttpPost]
+    [HttpPost("Create")]
     public async Task<IActionResult> Create([FromBody] CreateEmpleadoDto dto)
     {
         await _service.CreateAsync(dto);
@@ -44,7 +44,7 @@ public class EmpleadoController : ControllerBase
     }
 
     // PUT: api/empleado/5
-    [HttpPut("{id}")]
+    [HttpPut("Update/{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateEmpleadoDto dto)
     {
         await _service.UpdateAsync(id, dto);
@@ -52,7 +52,7 @@ public class EmpleadoController : ControllerBase
     }
 
     // DELETE: api/empleado/5
-    [HttpDelete("{id}")]
+    [HttpDelete("Delete/{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         await _service.DeleteAsync(id);
