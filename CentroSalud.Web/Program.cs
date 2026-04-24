@@ -19,6 +19,8 @@ builder.Services.AddScoped<IPacienteService, PacienteService>();
 builder.Services.AddScoped<ISustitucionService, SustitucionService>();
 builder.Services.AddScoped<IHorarioService, HorarioService>();
 builder.Services.AddScoped<IHorarioRepository, HorarioRepository>();
+builder.Services.AddScoped<IVacacionService, VacacionService>();
+builder.Services.AddScoped<IVacacionRepository, VacacionRepository>();
 
 // 🔐 Autorización
 builder.Services.AddAuthorization();

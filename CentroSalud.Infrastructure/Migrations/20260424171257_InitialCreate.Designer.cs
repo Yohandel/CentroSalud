@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CentroSalud.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260418064720_InitialCreate")]
+    [Migration("20260424171257_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -231,6 +231,12 @@ namespace CentroSalud.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Activa")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("DiasTomados")
+                        .HasColumnType("int");
+
                     b.Property<int?>("EmpleadoId")
                         .HasColumnType("int");
 
@@ -240,7 +246,7 @@ namespace CentroSalud.Infrastructure.Migrations
                     b.Property<DateTime>("FechaInicio")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MedicoId")
+                    b.Property<int?>("MedicoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -295,15 +301,19 @@ namespace CentroSalud.Infrastructure.Migrations
 
             modelBuilder.Entity("CentroSalud.Domain.Entities.Vacacion", b =>
                 {
-                    b.HasOne("CentroSalud.Domain.Entities.Empleado", null)
+                    b.HasOne("CentroSalud.Domain.Entities.Empleado", "Empleado")
                         .WithMany("Vacaciones")
-                        .HasForeignKey("EmpleadoId");
+                        .HasForeignKey("EmpleadoId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("CentroSalud.Domain.Entities.Medico", null)
+                    b.HasOne("CentroSalud.Domain.Entities.Medico", "Medico")
                         .WithMany("Vacaciones")
                         .HasForeignKey("MedicoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Empleado");
+
+                    b.Navigation("Medico");
                 });
 
             modelBuilder.Entity("CentroSalud.Domain.Entities.Empleado", b =>

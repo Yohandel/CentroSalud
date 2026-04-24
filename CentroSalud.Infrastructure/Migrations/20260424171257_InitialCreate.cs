@@ -17,6 +17,7 @@ namespace CentroSalud.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Tipo = table.Column<int>(type: "int", nullable: false),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -24,8 +25,7 @@ namespace CentroSalud.Infrastructure.Migrations
                     Provincia = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CodigoPostal = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NIF = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NumeroSeguridadSocial = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Tipo = table.Column<int>(type: "int", nullable: false)
+                    NumeroSeguridadSocial = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,6 +38,8 @@ namespace CentroSalud.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    NumeroColegiado = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Tipo = table.Column<int>(type: "int", nullable: false),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -45,9 +47,7 @@ namespace CentroSalud.Infrastructure.Migrations
                     Provincia = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CodigoPostal = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NIF = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NumeroSeguridadSocial = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NumeroColegiado = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Tipo = table.Column<int>(type: "int", nullable: false)
+                    NumeroSeguridadSocial = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -135,10 +135,12 @@ namespace CentroSalud.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    EmpleadoId = table.Column<int>(type: "int", nullable: true),
+                    MedicoId = table.Column<int>(type: "int", nullable: true),
                     FechaInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaFin = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    MedicoId = table.Column<int>(type: "int", nullable: false),
-                    EmpleadoId = table.Column<int>(type: "int", nullable: true)
+                    DiasTomados = table.Column<int>(type: "int", nullable: false),
+                    Activa = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -147,13 +149,14 @@ namespace CentroSalud.Infrastructure.Migrations
                         name: "FK_Vacaciones_Empleados_EmpleadoId",
                         column: x => x.EmpleadoId,
                         principalTable: "Empleados",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Vacaciones_Medicos_MedicoId",
                         column: x => x.MedicoId,
                         principalTable: "Medicos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

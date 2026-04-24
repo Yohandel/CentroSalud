@@ -56,11 +56,18 @@ public class ApplicationDbContext : DbContext
         .HasForeignKey(h => h.MedicoId)   
         .OnDelete(DeleteBehavior.Cascade);
 
+        // 🌴 Vacaciones → Empleado
+        modelBuilder.Entity<Vacacion>()
+            .HasOne(v => v.Empleado)
+            .WithMany(e => e.Vacaciones)
+            .HasForeignKey(v => v.EmpleadoId)
+            .OnDelete(DeleteBehavior.Restrict);
+
         // 🌴 Vacaciones → Medico
         modelBuilder.Entity<Vacacion>()
-            .HasOne<Medico>()
+            .HasOne(v => v.Medico)
             .WithMany(m => m.Vacaciones)
             .HasForeignKey(v => v.MedicoId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }
