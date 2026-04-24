@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Horarios</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Gestión de Horarios</h1>
+
+        <div class="section">
+            <button id="btnCargar">Ver Horarios</button>
+        </div>
+
+        <div class="section">
+            <h2>Crear / Editar Horario</h2>
+
+            <select id="dia">
+                <option value="1">Lunes</option>
+                <option value="2">Martes</option>
+                <option value="3">Miércoles</option>
+                <option value="4">Jueves</option>
+                <option value="5">Viernes</option>
+            </select>
+
+            <input id="inicio" type="time">
+            <input id="fin" type="time">
+
+            <input id="medicoId" placeholder="ID del médico">
+
+            <button id="btnGuardar">Guardar</button>
+        </div>
+
+        <div class="section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Día</th>
+                        <th>Inicio</th>
+                        <th>Fin</th>
+          
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/horarios.js"></script>
+
+</body>
+</html>

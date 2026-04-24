@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vacaciones</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Vacaciones de Médicos</h1>
+
+        <label>Médico</label>
+        <input id="medicoId"></input>
+
+        <label>Fecha Inicio</label>
+        <input id="fechaInicio" type="date">
+
+        <label>Fecha Fin</label>
+        <input id="fechaFin" type="date">
+
+        <button id="btnGuardar">Guardar</button>
+        <button id="btnCargar">Ver Vacaciones</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Médico</th>
+                    <th>Inicio</th>
+                    <th>Fin</th>
+                </tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+        </table>
+
+    </div>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/vacaciones.js"></script>
+
+</body>
+
+</html>
