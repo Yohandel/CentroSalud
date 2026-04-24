@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Empleados</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Gestión de Empleados</h1>
+
+        <button id="btnCargar">Ver Empleados</button>
+
+        <h2>Crear / Editar Empleado</h2>
+
+        <input id="nombre" placeholder="Nombre">
+        <input id="cargo" placeholder="Cargo">
+        <input id="departamento" placeholder="Departamento">
+
+        <button id="btnGuardar">Guardar</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                    <th>Departamento</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+        </table>
+
+    </div>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/empleados.js"></script>
+
+</body>
+
+</html>

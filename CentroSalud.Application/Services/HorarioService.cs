@@ -1,75 +1,76 @@
-﻿using CentroSalud.Application.DTOs;
-using CentroSalud.Application.DTOs.Empleado;
-using CentroSalud.Application.DTOs.Horario;
-using CentroSalud.Application.DTOs.Medico;
+﻿using CentroSalud.Application.DTOs.Horario;
 using CentroSalud.Application.Interfaces;
 using CentroSalud.Domain.Entities;
-using CentroSalud.Domain.Interfaces;
 
 public class HorarioService : IHorarioService
 {
-    private readonly IHorarioRepository _repo;
+    // Base de datos falsa en memoria
+    private static List<Horario> _fakeDb = new();
 
-    public HorarioService(IHorarioRepository repo)
-    {
-        _repo = repo;
-    }
-
+    //  GET ALL
     public async Task<List<HorarioDto>> GetAllAsync()
     {
-        var horarios = await _repo.GetAllAsync();
-
-        return horarios.Select(h => new HorarioDto
+        return _fakeDb.Select(h => new HorarioDto
         {
             Id = h.Id,
             Dia = h.Dia.ToString(),
-            HoraInicio = h.HoraInicio.ToString(),
-            HoraFin = h.HoraFin.ToString(),
+            HoraInicio = h.HoraInicio.ToString(@"hh\:mm"),
+            HoraFin = h.HoraFin.ToString(@"hh\:mm"),
         }).ToList();
     }
 
+    // GET BY ID
     public async Task<HorarioDto?> GetByIdAsync(int id)
     {
-        var h = await _repo.GetByIdAsync(id);
+        var h = _fakeDb.FirstOrDefault(x => x.Id == id);
         if (h == null) return null;
 
         return new HorarioDto
         {
             Id = h.Id,
             Dia = h.Dia.ToString(),
-            HoraInicio = h.HoraInicio.ToString(),
-            HoraFin = h.HoraFin.ToString()
+            HoraInicio = h.HoraInicio.ToString(@"hh\:mm"),
+            HoraFin = h.HoraFin.ToString(@"hh\:mm")
         };
     }
 
+    // CREATE
     public async Task CreateAsync(CreateHorarioDto dto)
     {
+        if (dto.HoraInicio >= dto.HoraFin)
+            throw new Exception("Hora inicio debe ser menor que hora fin");
+
         var horario = new Horario
         {
+            Id = _fakeDb.Count + 1,
             Dia = dto.Dia,
             HoraInicio = dto.HoraInicio,
             HoraFin = dto.HoraFin,
             MedicoId = dto.MedicoId
         };
 
-        await _repo.AddAsync(horario);
+        _fakeDb.Add(horario);
     }
 
+    // UPDATE
     public async Task UpdateAsync(int id, UpdateHorarioDto dto)
     {
-        var horario = await _repo.GetByIdAsync(id);
+        var horario = _fakeDb.FirstOrDefault(x => x.Id == id);
         if (horario == null) throw new Exception("Horario no encontrado");
+
+        if (dto.HoraInicio >= dto.HoraFin)
+            throw new Exception("Hora inicio debe ser menor que hora fin");
 
         horario.Dia = dto.Dia;
         horario.HoraInicio = dto.HoraInicio;
         horario.HoraFin = dto.HoraFin;
-
-        await _repo.UpdateAsync(horario);
     }
 
-
+    //  DELETE
     public async Task DeleteAsync(int id)
     {
-        await _repo.DeleteAsync(id);
+        var horario = _fakeDb.FirstOrDefault(x => x.Id == id);
+        if (horario != null)
+            _fakeDb.Remove(horario);
     }
 }
