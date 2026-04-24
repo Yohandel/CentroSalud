@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CentroSalud.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74ba94e13185227743888c2a40fc7f2a8654b41b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f765bc0d54dacf0ce40e300bf3f72a3293500760")]
 [assembly: System.Reflection.AssemblyProductAttribute("CentroSalud.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CentroSalud.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

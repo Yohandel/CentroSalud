@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj": {}
+    "D:\\Projects\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj": {
+    "D:\\Projects\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj",
+        "projectUniqueName": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj",
         "projectName": "CentroSalud.Application",
-        "projectPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj",
-        "packagesPath": "C:\\Users\\SoyAlti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Application\\obj\\",
+        "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj",
+        "packagesPath": "C:\\Users\\Yohandel Cuevas\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SoyAlti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yohandel Cuevas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,14 +30,13 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj": {
-                "projectPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj"
+              "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj": {
+                "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj"
               },
-              "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj"
+              "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj": {
+                "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj"
               }
             }
           }
@@ -52,11 +51,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -74,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -352,20 +350,20 @@
         }
       }
     },
-    "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj": {
+    "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj",
         "projectName": "CentroSalud.Domain",
-        "projectPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj",
-        "packagesPath": "C:\\Users\\SoyAlti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Domain\\obj\\",
+        "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj",
+        "packagesPath": "C:\\Users\\Yohandel Cuevas\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SoyAlti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yohandel Cuevas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -378,7 +376,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -393,11 +390,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -415,7 +411,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -693,20 +689,20 @@
         }
       }
     },
-    "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj": {
+    "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj",
         "projectName": "CentroSalud.Infrastructure",
-        "projectPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\SoyAlti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Infrastructure\\obj\\",
+        "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Yohandel Cuevas\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SoyAlti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yohandel Cuevas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -719,11 +715,10 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj": {
-                "projectPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj"
+              "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj": {
+                "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Domain\\CentroSalud.Domain.csproj"
               }
             }
           }
@@ -738,11 +733,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
@@ -782,7 +776,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1060,20 +1054,20 @@
         }
       }
     },
-    "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj": {
+    "D:\\Projects\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj",
+        "projectUniqueName": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj",
         "projectName": "CentroSalud.Web",
-        "projectPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj",
-        "packagesPath": "C:\\Users\\SoyAlti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Web\\obj\\",
+        "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\CentroSalud.Web.csproj",
+        "packagesPath": "C:\\Users\\Yohandel Cuevas\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\CentroSalud\\CentroSalud.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SoyAlti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yohandel Cuevas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1086,14 +1080,13 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj": {
-                "projectPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj"
+              "D:\\Projects\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj": {
+                "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Application\\CentroSalud.Application.csproj"
               },
-              "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\SoyAlti\\Desktop\\Centrodesalud\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj"
+              "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj": {
+                "projectPath": "D:\\Projects\\CentroSalud\\CentroSalud.Infrastructure\\CentroSalud.Infrastructure.csproj"
               }
             }
           }
@@ -1108,11 +1101,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
@@ -1143,7 +1135,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
