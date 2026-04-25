@@ -162,18 +162,18 @@
             cargar();
         }
 
-        async function eliminar(id) {
-            let idEliminar = id;
+         function eliminar(idVal) {
+            idEliminar = idVal;
             confirmModal.show();
         }
 
-        async function confirmarEliminar() {
-            await fetch(`/api/Paciente/Delete/${idEliminar}`, {
-                method: "DELETE"
-            });
+      async function confirmarEliminar() {
+        await fetch(`/api/Paciente/Delete/${idEliminar}`, {
+            method: "DELETE"
+        });
 
-            confirmModal.hide();
-            cargar();
-        }
+        confirmModal.hide();
+        cargar();
+    }
     </script>
 }

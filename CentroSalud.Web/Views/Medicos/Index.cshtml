@@ -186,7 +186,7 @@
         }
 
       async function confirmarEliminar() {
-        await fetch(`api/Medico/Delete/${idEliminar}`, {
+        await fetch(`/api/Medico/Delete/${idEliminar}`, {
             method: "DELETE"
         });
 
