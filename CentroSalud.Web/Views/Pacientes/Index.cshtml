@@ -1,0 +1,179 @@
+@{
+    Layout = "_Layout";
+}
+
+<h2>Pacientes</h2>
+
+<button class="btn btn-success mb-3" onclick="abrirModal()">Nuevo Paciente</button>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Medico</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="tabla"></tbody>
+</table>
+
+<div class="modal fade" id="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Paciente</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" id="id">
+                <input id="nombre" class="form-control mb-2" placeholder="Nombre">
+                <input id="direccion" class="form-control mb-2" placeholder="Dirección">
+                <input id="codigoPostal" class="form-control mb-2" placeholder="Código Postal">
+                <input id="nif" class="form-control mb-2" placeholder="NIF">
+                <input id="numeroSeguridadSocial" class="form-control mb-2" placeholder="Número Seguridad Social">
+                <input id="telefono" class="form-control mb-2" placeholder="Teléfono">
+                <select id="medico" class="form-control mb-2"></select>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="guardar()">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Confirmar</h5>
+            </div>
+
+            <div class="modal-body">
+                ¿Eliminar este registro?
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-danger" onclick="confirmarEliminar()">Sí</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script>
+        let modal;
+        let confirmModal;
+        document.addEventListener("DOMContentLoaded", () => {
+
+            modal = new bootstrap.Modal(document.getElementById('modal'));
+            confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+
+            cargar();
+            cargarMedicos();
+        });
+
+        async function cargar() {
+            let res = await fetch("/api/Paciente/GetAll");
+            let data = await res.json();
+
+            let html = "";
+            data.forEach(p => {
+                html += `
+                <tr>
+                    <td>${p.nombre}</td>
+                    <td>${p.telefono}</td>
+                    <td>${p.medicoNombre}</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" onclick="editar(${p.id})">Editar</button>
+                        <button class="btn btn-danger btn-sm" onclick="eliminar(${p.id})">Eliminar</button>
+                        <button class="btn btn-info btn-sm" onclick="window.location='/Pacientes/Details/${p.id}'">Detalles</button>
+                    </td>
+                </tr>`;
+            });
+
+            tabla.innerHTML = html;
+        }
+
+        async function cargarMedicos() {
+            let res = await fetch("/api/Medico/GetAll");
+            let data = await res.json();
+
+            let select = document.getElementById("medico");
+            select.innerHTML = "";
+
+            data.forEach(m => {
+                select.innerHTML += `<option value="${m.id}">${m.nombre}</option>`;
+            });
+        }
+
+        function abrirModal() {
+            id.value = "";
+            nombre.value = "";
+            direccion.value = "";
+            codigoPostal.value = "";
+            nif.value = "";
+            numeroSeguridadSocial.value = "";
+            telefono.value = "";
+            medico.value = "";
+            modal.show();
+        }
+
+        async function editar(i) {
+            let res = await fetch(`/api/Paciente/GetById/${i}`);
+            let p = await res.json();
+
+            id.value = p.id;
+            nombre.value = p.nombre;
+            telefono.value = p.telefono;
+            direccion.value = p.direccion;
+            codigoPostal.value = p.codigoPostal;
+            nif.value = p.nif;
+            numeroSeguridadSocial.value = p.numeroSeguridadSocial;
+            medico.value = p.medicoId;
+            modal.show();
+        }
+
+        async function guardar() {
+            let data = {
+                nombre: nombre.value,
+                direccion: direccion.value,
+                codigoPostal: codigoPostal.value,
+                nif: nif.value,
+                numeroSeguridadSocial: numeroSeguridadSocial.value,
+                telefono: telefono.value,
+                medicoId: medico.value
+            };
+
+            if (id.value)
+                await fetch(`/api/Paciente/Update/${id.value}`, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+            else
+                await fetch(`/api/Paciente/Create`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+
+            modal.hide();
+            cargar();
+        }
+
+        async function eliminar(id) {
+            let idEliminar = id;
+            confirmModal.show();
+        }
+
+        async function confirmarEliminar() {
+            await fetch(`/api/Paciente/Delete/${idEliminar}`, {
+                method: "DELETE"
+            });
+
+            confirmModal.hide();
+            cargar();
+        }
+    </script>
+}

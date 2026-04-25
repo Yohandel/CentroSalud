@@ -16,12 +16,16 @@ namespace CentroSalud.Infrastructure.Repositories
 
         public async Task<List<Horario?>> GetAllAsync()
         {
-            return await _context.Horarios.ToListAsync();
+            return await _context.Horarios
+            .Include(h => h.Medico)
+            .ToListAsync();
         }
 
         public async Task<Horario?> GetByIdAsync(int id)
         {
-            return await _context.Horarios.FindAsync(id);
+            return await _context.Horarios
+      .Include(h => h.Medico) // 🔥 CLAVE
+      .FirstOrDefaultAsync(h => h.Id == id);
         }
 
         public async Task<Horario?> AddAsync(Horario? horario)
@@ -44,7 +48,7 @@ namespace CentroSalud.Infrastructure.Repositories
 
         public async Task<Horario?> DeleteAsync(int id)
         {
-            var horario = await _context.Horarios   .FindAsync(id);
+            var horario = await _context.Horarios.FindAsync(id);
 
             if (horario != null)
             {
@@ -52,6 +56,14 @@ namespace CentroSalud.Infrastructure.Repositories
                 await _context.SaveChangesAsync();
             }
             return horario; // Devuelve el horario eliminado (o null si no existía)
+        }
+
+        public async Task<List<Horario?>> GetByMedicoIdAsync(int medicoId)
+        {
+            return await _context.Horarios
+            .Include(h => h.Medico) // 🔥 CLAVE
+            .Where(h => h.MedicoId == medicoId)
+            .ToListAsync();
         }
     }
 }

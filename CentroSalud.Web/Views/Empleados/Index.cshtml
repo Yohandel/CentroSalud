@@ -1,0 +1,224 @@
+@{
+    Layout = "_Layout";
+}
+
+<h2>Empleados</h2>
+
+<button class="btn btn-success mb-3" onclick="abrirModal()">Nuevo Empleado</button>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Tipo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="tabla"></tbody>
+</table>
+
+<!-- 🔥 MODAL -->
+<div class="modal fade" id="empleadoModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Empleado</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" id="id">
+
+                <input id="nombre" class="form-control mb-2" placeholder="Nombre">
+                <input id="direccion" class="form-control mb-2" placeholder="Dirección">
+                <input id="poblacion" class="form-control mb-2" placeholder="Población">
+                <input id="provincia" class="form-control mb-2" placeholder="Provincia">
+                <input id="codigoPostal" class="form-control mb-2" placeholder="Código Postal">
+                <input id="nif" class="form-control mb-2" placeholder="NIF">
+                <input id="numeroSeguridadSocial" class="form-control mb-2" placeholder="Número Seguridad Social">
+                <input id="telefono" class="form-control mb-2" placeholder="Teléfono">
+
+                <select id="tipo" class="form-control">
+                    <option disabled value="null">Seleccionar tipo</option>
+                    <option value="0">ATS</option>
+                    <option value="1">ATSZona</option>
+                    <option value="2">Auxiliar de Enfermería</option>
+                    <option value="3">Celador</option>
+                    <option value="4">Administrativo</option>
+                </select>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="guardar()">Guardar</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 🔥 MODAL CONFIRMAR -->
+<div class="modal fade" id="confirmModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Confirmar</h5>
+            </div>
+
+            <div class="modal-body">
+                ¿Eliminar este empleado?
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-danger" onclick="confirmarEliminar()">Sí</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    let modal;
+    let confirmModal;
+    let idEliminar = 0;
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+        modal = new bootstrap.Modal(document.getElementById('empleadoModal'));
+        confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+
+        cargar();
+    });
+
+    async function cargar() {
+        let res = await fetch("/api/Empleado/GetAll");
+
+        if (!res.ok) {
+            console.log("Error:", res.status);
+            return;
+        }
+
+        let data = await res.json();
+
+        let html = "";
+        data.forEach(e => {
+            html += `
+            <tr>
+                <td>${e.nombre}</td>
+                <td>${e.telefono}</td>
+                <td>${e.tipo}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editar(${e.id})">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="eliminar(${e.id})">Eliminar</button>
+                    <button class="btn btn-info btn-sm" onclick="window.location='/Empleados/Details/${e.id}'">Detalles</button>
+                </td>
+            </tr>`;
+        });
+
+        document.getElementById("tabla").innerHTML = html;
+    }
+
+    function abrirModal() {
+        id.value = "";
+        nombre.value = "";
+        direccion.value = "";
+        poblacion.value = "";
+        provincia.value = "";
+        codigoPostal.value = "";
+        nif.value = "";
+        numeroSeguridadSocial.value = "";
+        telefono.value = "";
+        tipo.value = null;
+        modal.show();
+    }
+
+    async function editar(idVal) {
+        let res = await fetch(`/api/Empleado/GetById/${idVal}`);
+        let e = await res.json();
+        let tipoValue = null;
+
+        switch (e.tipo) {
+            case "ATS":
+                tipoValue = 0;
+                break;
+            case "ATSZona":
+                tipoValue = 1;
+                break;
+            case "Auxiliar de Enfermería":
+                tipoValue = 2;
+                break;
+            case "Celador":
+                tipoValue = 3;
+                break;
+            case "Administrativo":
+                tipoValue = 4;
+                break;
+        }
+
+        id.value = e.id;
+        nombre.value = e.nombre;
+        telefono.value = e.telefono;
+        direccion.value = e.direccion;
+        poblacion.value = e.poblacion;
+        provincia.value = e.provincia;
+        codigoPostal.value = e.codigoPostal;
+        nif.value = e.nif;
+        numeroSeguridadSocial.value = e.numeroSeguridadSocial;
+        tipo.value = tipoValue;
+
+        modal.show();
+    }
+
+    async function guardar() {
+        let idVal = id.value;
+
+        let data = {
+            nombre: nombre.value,
+            direccion: direccion.value,
+            poblacion: poblacion.value,
+            provincia: provincia.value,
+            codigoPostal: codigoPostal.value,
+            nif: nif.value,
+            numeroSeguridadSocial: numeroSeguridadSocial.value,
+            telefono: telefono.value,
+            tipo: parseInt(tipo.value)
+        };
+
+        if (idVal) {
+            await fetch(`/api/Empleado/Update/${idVal}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+        } else {
+            await fetch(`/api/Empleado/Create`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+        }
+
+        modal.hide();
+        cargar();
+    }
+
+    function eliminar(idVal) {
+        idEliminar = idVal;
+        confirmModal.show();
+    }
+
+    async function confirmarEliminar() {
+        await fetch(`/api/Empleado/Delete/${idEliminar}`, {
+            method: "DELETE"
+        });
+
+        confirmModal.hide();
+        cargar();
+    }
+</script>
+}

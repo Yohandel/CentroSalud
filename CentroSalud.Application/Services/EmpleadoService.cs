@@ -24,6 +24,9 @@ public class EmpleadoService : IEmpleadoService
             Direccion = e.Direccion,
             Poblacion = e.Poblacion,
             Provincia = e.Provincia,
+            CodigoPostal = e.CodigoPostal,
+            NIF = e.NIF,
+            NumeroSeguridadSocial = e.NumeroSeguridadSocial,
             Tipo = e.Tipo.ToString()
         }).ToList();
     }
@@ -38,6 +41,12 @@ public class EmpleadoService : IEmpleadoService
             Id = e.Id,
             Nombre = e.Nombre,
             Telefono = e.Telefono,
+            Direccion = e.Direccion,
+            Poblacion = e.Poblacion,
+            Provincia = e.Provincia,
+            CodigoPostal = e.CodigoPostal,
+            NIF = e.NIF,
+            NumeroSeguridadSocial = e.NumeroSeguridadSocial,
             Tipo = e.Tipo.ToString()
         };
     }
@@ -68,6 +77,12 @@ public class EmpleadoService : IEmpleadoService
         empleado.Nombre = dto.Nombre;
         empleado.Direccion = dto.Direccion;
         empleado.Telefono = dto.Telefono;
+        empleado.Poblacion = dto.Poblacion;
+        empleado.Provincia = dto.Provincia;
+        empleado.CodigoPostal = dto.CodigoPostal;
+        empleado.NIF = dto.NIF;
+        empleado.NumeroSeguridadSocial = dto.NumeroSeguridadSocial;
+        empleado.Tipo = (CentroSalud.Domain.Enums.TipoEmpleado)dto.Tipo;
 
         await _repo.UpdateAsync(empleado);
     }

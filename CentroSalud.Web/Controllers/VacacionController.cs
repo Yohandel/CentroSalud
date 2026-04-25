@@ -12,6 +12,12 @@ public class VacacionController : ControllerBase
         _service = service;
     }
 
+    [HttpGet("GetAll")]
+    public async Task<IActionResult> GetAll()
+    {
+        var result = await _service.GetALL();
+        return Ok(result);
+    }
     // 🔹 Obtener vacaciones de un empleado
     [HttpGet("GetAllByPerson")]
     public async Task<IActionResult> Get(int? empleadoId, int? medicoId)

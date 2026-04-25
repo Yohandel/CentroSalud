@@ -1,7 +1,5 @@
 ﻿using CentroSalud.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace CentroSalud.Domain.Interfaces
 {
@@ -9,8 +7,9 @@ namespace CentroSalud.Domain.Interfaces
     {
         Task<List<Horario?>> GetAllAsync();
         Task<Horario?> GetByIdAsync(int id);
-        Task<Horario?> AddAsync(Horario? horario);
-        Task<Horario?> UpdateAsync(Horario? horario);
+        Task<List<Horario?>> GetByMedicoIdAsync(int medicoId);
+        Task<Horario?> AddAsync(Horario horario);
+        Task<Horario?> UpdateAsync(Horario horario);
         Task<Horario?> DeleteAsync(int id);
 
 

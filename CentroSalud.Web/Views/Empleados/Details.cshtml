@@ -1,0 +1,37 @@
+@{
+    Layout = "_Layout";
+}
+
+<button class="btn btn-secondary mb-3" onclick="window.history.back()">Volver</button>
+<h2>Detalle de Empleado</h2>
+
+<div class="card">
+    <div class="card-body">
+        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+        <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+        <p><strong>Tipo:</strong> <span id="tipo"></span></p>
+        <p><strong>Dirección:</strong> <span id="direccion"></span></p>
+        <p><strong>Población:</strong> <span id="poblacion"></span></p>
+        <p><strong>Provincia:</strong> <span id="provincia"></span></p>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+const id = window.location.pathname.split("/").pop();
+
+async function cargar() {
+    let res = await fetch(`/api/Empleado/GetById/${id}`);
+    let e = await res.json();
+
+    nombre.innerText = e.nombre;
+    telefono.innerText = e.telefono;
+    tipo.innerText = e.tipo;
+    direccion.innerText = e.direccion;
+    poblacion.innerText = e.poblacion;
+    provincia.innerText = e.provincia;
+}
+
+cargar();
+</script>
+}

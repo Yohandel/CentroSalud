@@ -1,0 +1,189 @@
+@{
+    Layout = "_Layout";
+}
+
+<h2>Agenda Médica</h2>
+
+<button class="btn btn-success mb-3" onclick="nuevo()">Nuevo Horario</button>
+
+<table class="table table-bordered text-center align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+            <th>Domingo</th>
+        </tr>
+    </thead>
+    <tbody id="calendario"></tbody>
+</table>
+
+<!-- MODAL -->
+<div class="modal fade" id="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Horario</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" id="id">
+
+                <select id="medico" class="form-control mb-2"></select>
+
+                <select id="dia" class="form-control mb-2">
+                    <option value="1">Lunes</option>
+                    <option value="2">Martes</option>
+                    <option value="3">Miércoles</option>
+                    <option value="4">Jueves</option>
+                    <option value="5">Viernes</option>
+                    <option value="6">Sábado</option>
+                    <option value="0">Domingo</option>
+                </select>
+
+                <input type="time" id="inicio" class="form-control mb-2">
+                <input type="time" id="fin" class="form-control">
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="guardar()">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let modal;
+
+        const horas = 
+        ["07:00", "08:00", "09:00", "10:00", 
+        "11:00", "12:00", "13:00", 
+        "14:00", "15:00", "16:00",
+        "17:00", "18:00", "19:00",
+        "20:00", "21:00", "22:00",
+        "23:00", "00:00"];
+
+        document.addEventListener("DOMContentLoaded", () => {
+            modal = new bootstrap.Modal(document.getElementById("modal"));
+            cargarMedicos();
+            cargarAgenda();
+        });
+
+        async function cargarAgenda() {
+            let res = await fetch("/api/Horario/GetAll");
+            let data = await res.json();
+
+            let html = "";
+
+            horas.forEach(h => {
+                html += "<tr>";
+                html += `<td>${h}</td>`;
+
+                for (let d = 1; d <= 6; d++) {
+                    html += `<td id="c-${h}-${d}"></td>`;
+                }
+
+                html += "</tr>";
+            });
+
+            document.getElementById("calendario").innerHTML = html;
+
+            pintar(data);
+        }
+
+        function pintar(data) {
+            data.forEach(h => {
+
+                let dia = h.dia === 0 ? 7 : h.dia;
+
+                let inicio = formatearHora(h.horaInicio);
+
+                let cell = document.getElementById(`c-${inicio}-${dia}`);
+
+                if (!cell) {
+                    return;
+                }
+
+                cell.innerHTML += `
+                <div class="bg-danger text-white p-1 mb-1 rounded"
+                     onclick="editar(${h.id})"
+                     style="cursor:pointer">
+                    ${h.medicoNombre}<br>
+                    ${inicio} - ${formatearHora(h.horaFin)}
+                </div>
+            `;
+            });
+        }
+
+        function formatearHora(hora) {
+            let partes = hora.split(":");
+            let h = partes[0].padStart(2, "0");
+            let m = partes[1].padStart(2, "0");
+            return `${h}:${m}`;
+        }
+
+        async function cargarMedicos() {
+            let res = await fetch("/api/Medico/GetAll");
+            let data = await res.json();
+
+            let select = document.getElementById("medico");
+            select.innerHTML = "";
+
+            data.forEach(m => {
+                select.innerHTML += `<option value="${m.id}">${m.nombre}</option>`;
+            });
+        }
+
+        function nuevo() {
+            id.value = "";
+            modal.show();
+        }
+
+        async function editar(idVal) {
+            let res = await fetch(`/api/Horario/GetById/${idVal}`);
+            let h = await res.json();
+
+            id.value = h.id;
+            medico.value = h.medicoId;
+            dia.value = h.dia;
+            inicio.value = h.horaInicio.substring(0, 5);
+            fin.value = h.horaFin.substring(0, 5);
+
+            modal.show();
+        }
+
+        async function guardar() {
+            let data = {
+                medicoId: parseInt(medico.value),
+                dia: parseInt(dia.value),
+                horaInicio: inicio.value,
+                horaFin: fin.value
+            };
+
+            if (id.value) {
+                await fetch(`/api/Horario/Update/${id.value}`, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+            } else {
+                await fetch(`/api/Horario/Create`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+            }
+
+            modal.hide();
+            cargarAgenda();
+        }
+    </script>
+}

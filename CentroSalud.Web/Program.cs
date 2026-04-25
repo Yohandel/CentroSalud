@@ -8,7 +8,7 @@ using CentroSalud.Infrastructure.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Servicios
-builder.Services.AddControllers();
+builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructure();
@@ -48,6 +48,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Auth}/{action=Login}/{id?}"
+);
+
 
 app.MapControllers();
 

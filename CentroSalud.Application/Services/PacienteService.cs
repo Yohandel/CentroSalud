@@ -26,6 +26,7 @@ public class PacienteService : IPacienteService
             NIF = p.NIF,
             Telefono = p.Telefono,
             MedicoId = p.MedicoId,
+            MedicoNombre = p.Medico?.Nombre ?? "Sin médico"
         }).ToList();
     }
 
@@ -39,7 +40,12 @@ public class PacienteService : IPacienteService
             Id = p.Id,
             Nombre = p.Nombre,
             Telefono = p.Telefono,
-            MedicoId = p.MedicoId
+            MedicoId = p.MedicoId,
+            Direccion = p.Direccion,
+            CodigoPostal = p.CodigoPostal,
+            NIF = p.NIF,
+            NumeroSeguridadSocial = p.NumeroSeguridadSocial,
+            MedicoNombre = p.Medico?.Nombre ?? "Sin médico"
         };
     }
 

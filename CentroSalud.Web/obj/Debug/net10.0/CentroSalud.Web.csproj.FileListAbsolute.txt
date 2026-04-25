@@ -74,7 +74,6 @@ D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\staticwebassets.build.
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\staticwebassets.development.json
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\swae.build.ex.cache
-D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\CentroSa.95BD9566.Up2Date
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\CentroSalud.Web.dll
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\refint\CentroSalud.Web.dll
@@ -198,3 +197,5 @@ D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\compressed\3ekx9mpb28-
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\compressed\scpe9mx0wg-{0}-760uixnoh5-760uixnoh5.gz
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\compressed\glrqktmr2k-{0}-r93kgqljr2-r93kgqljr2.gz
 D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\compressed\u9odpuh0l6-{0}-p8noiray8n-p8noiray8n.gz
+D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\CentroSalud.Web.RazorAssemblyInfo.cache
+D:\Projects\CentroSalud\CentroSalud.Web\obj\Debug\net10.0\CentroSalud.Web.RazorAssemblyInfo.cs

@@ -6,8 +6,8 @@ namespace CentroSalud.Domain.Enums
 {
     public enum TipoMedico
     {
-        Titular,
-        Interino,
-        Sustituto
+        Titular, // El médico titular 0
+        Interino,// El médico interino 1
+        Sustituto// El médico sustituto 2
     }
 }

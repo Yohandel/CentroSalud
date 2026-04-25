@@ -1,0 +1,208 @@
+@{
+    Layout = "_Layout";
+}
+
+<h2>Médicos</h2>
+
+<button class="btn btn-success mb-3" onclick="abrirModal()">Nuevo Médico</button>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Tipo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="tabla"></tbody>
+</table>
+
+<div class="modal fade" id="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Médico</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" id="id">
+                <input id="nombre" class="form-control mb-2" placeholder="Nombre">
+                <input id="direccion" class="form-control mb-2" placeholder="Dirección">
+                <input id="poblacion" class="form-control mb-2" placeholder="Población">
+                <input id="provincia" class="form-control mb-2" placeholder="Provincia">
+                <input id="codigoPostal" class="form-control mb-2" placeholder="Código Postal">
+                <input id="nif" class="form-control mb-2" placeholder="NIF">
+                <input id="numeroSeguridadSocial" class="form-control mb-2" placeholder="Número Seguridad Social">
+                <input id="numeroColegiado" class="form-control mb-2" placeholder="Número Colegiado">
+                <input id="telefono" class="form-control mb-2" placeholder="Teléfono">
+
+                <select id="tipo" class="form-control">
+                    <option disabled value="null">Seleccionar tipo</option>
+                    <option value="0">Titular</option>
+                    <option value="1">Interino</option>
+                    <option value="2">Sustituto</option>
+                </select>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="guardar()">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Confirmar</h5>
+            </div>
+
+            <div class="modal-body">
+                ¿Eliminar este registro?
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-danger" onclick="confirmarEliminar()">Sí</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+        let modal;
+        let confirmModal;
+        document.addEventListener("DOMContentLoaded", () => {
+
+            modal = new bootstrap.Modal(document.getElementById('modal'));
+            confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+
+            cargar();
+        });
+
+        async function cargar() {
+            let res = await fetch("/api/Medico/GetAll");
+            let data = await res.json();
+
+            let html = "";
+            data.forEach(m => {
+                html += `
+                <tr>
+                    <td>${m.nombre}</td>
+                    <td>${m.telefono}</td>
+                    <td>${m.tipo}</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" onclick="editar(${m.id})">Editar</button>
+                        <button class="btn btn-danger btn-sm" onclick="eliminar(${m.id})">Eliminar</button>
+                        <button class="btn btn-info btn-sm" onclick="window.location='/Medicos/Details/${m.id}'">Detalles</button>
+                    </td>
+                </tr>`;
+            });
+
+            tabla.innerHTML = html;
+        }
+
+        function abrirModal() {
+            id.value = "";
+            nombre.value = "";
+            direccion.value = "";
+            poblacion.value = "";
+            provincia.value = "";
+            codigoPostal.value = "";
+            nif.value = "";
+            numeroSeguridadSocial.value = "";
+            numeroColegiado.value = "";
+            telefono.value = "";
+            tipo.value = null;
+            modal.show();
+        }
+
+        async function editar(i) {
+            let res = await fetch(`/api/Medico/GetById/${i}`);
+            let m = await res.json();
+            let tipoVal = null;
+            switch (m.tipo) {
+                case "Titular":
+                    tipoVal = 0;
+                    break;
+                case "Interino":
+                    tipoVal = 1;
+                    break;
+                case "Sustituto":
+                    tipoVal = 2;
+                    break;
+            }
+
+            id.value = m.id;
+            nombre.value = m.nombre;
+            direccion.value = m.direccion;
+            poblacion.value = m.poblacion;
+            provincia.value = m.provincia;
+            codigoPostal.value = m.codigoPostal;
+            nif.value = m.nif;
+            numeroSeguridadSocial.value = m.numeroSeguridadSocial;
+            numeroColegiado.value = m.numeroColegiado;
+            telefono.value = m.telefono;
+            tipo.value = tipoVal;
+
+            modal.show();
+        }
+
+        async function guardar() {
+            let data = {
+                nombre: nombre.value,
+                direccion: direccion.value,
+                poblacion: poblacion.value,
+                provincia: provincia.value,
+                codigoPostal: codigoPostal.value,
+                nif: nif.value,
+                numeroSeguridadSocial: numeroSeguridadSocial.value,
+                numeroColegiado: numeroColegiado.value,
+                telefono: telefono.value,
+                tipo: tipo.value
+            };
+
+            if (id.value)
+                await fetch(`/api/Medico/Update/${id.value}`, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+            else
+                await fetch(`/api/Medico/Create`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+
+            modal.hide();
+            cargar();
+        }
+
+        function eliminar(idVal) {
+            idEliminar = idVal;
+            confirmModal.show();
+        }
+
+      async function confirmarEliminar() {
+        await fetch(`api/Medico/Delete/${idEliminar}`, {
+            method: "DELETE"
+        });
+
+        confirmModal.hide();
+        cargar();
+    }
+
+        function formatearHora(hora) {
+            let [h, m] = hora.split(":");
+            return `${h}:${m}`;
+        }
+
+        function formatearHora(hora) {
+            let [h, m] = hora.split(":");
+            return `${h}:${m}`;
+        }
+
+    </script>
+}

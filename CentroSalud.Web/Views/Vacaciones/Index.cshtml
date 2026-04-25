@@ -1,0 +1,166 @@
+@{
+    Layout = "_Layout";
+}
+
+<h2>Vacaciones</h2>
+
+<button class="btn btn-success mb-3" onclick="abrirModal()">Nueva Vacación</button>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Colaborador</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+            <th>Días</th>
+            <th>Días Restantes</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="tabla"></tbody>
+</table>
+
+<div class="modal fade" id="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Vacación</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" id="id">
+
+                <input id="empleadoId" class="form-control mb-2" placeholder="EmpleadoId">
+                <input id="medicoId" class="form-control mb-2" placeholder="MedicoId">
+
+                <input type="date" id="inicio" class="form-control mb-2">
+                <input type="date" id="fin" class="form-control">
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="guardar()">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Posponer Vacación</h5>
+            </div>
+
+           <div class="modal-body">
+            <p><strong>Colaborador:</strong> <span id="colaborador"></span></p>
+            <p><strong>Fecha de Inicio:</strong> <span id="fechaInicio"></span></p>
+            <p><strong>Fecha de Fin:</strong> <span id="fechaFin"></span></p>
+
+                <input type="hidden" id="id">
+                <input id="fechaCancelacion" class="form-control mb-2" type="date" placeholder="Fecha de Cancelación">
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-danger" onclick="confirmarEliminar()">Posponer</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts {
+
+    <script>
+        let modal;
+        let confirmModal;
+        document.addEventListener("DOMContentLoaded", () => {
+
+            modal = new bootstrap.Modal(document.getElementById('modal'));
+            confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+
+            cargar();
+        });
+
+        async function cargar() {
+            let res = await fetch("/api/vacacion/GetAll"); 
+            let data = await res.json();
+
+            let html = "";
+            data.forEach(v => {
+                html += `
+            <tr>
+                <td>${v.id}</td>
+                <td>${v.nombreEmpleado || v.nombreMedico}</td>
+                <td>${v.fechaInicio}</td>
+                <td>${v.fechaFin}</td>
+                <td>${v.diasTomados}</td>
+                <td>${v.diasRestantes}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editar(${v.id})">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="eliminar(${v.id})">Posponer</button>
+                </td>
+            </tr>`;
+            });
+
+            tabla.innerHTML = html;
+        }
+
+        function abrirModal() {
+            id.value = "";
+            empleadoId.value = "";
+            medicoId.value = "";
+            inicio.value = "";
+            fin.value = "";
+            modal.show();
+        }
+
+        async function guardar() {
+            let data = {
+                empleadoId: empleadoId.value || null,
+                medicoId: medicoId.value || null,
+                fechaInicio: inicio.value,
+                fechaFin: fin.value
+            };
+
+            if (id.value)
+                await fetch(`/api/Vacacion/Update`, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+            else
+                await fetch(`/api/Vacacion/Create`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+
+            modal.hide();
+            cargar();
+        }
+
+        function editar(id) {
+            fetch(`/api/Vacacion/GetAllByPerson`)
+                .then(res => res.json())
+                .then(v => {
+                    id.value = v.id;
+                    empleadoId.value = v.empleadoId || "";
+                    medicoId.value = v.medicoId || "";
+                    inicio.value = v.fechaInicio;
+                    fin.value = v.fechaFin;
+                    modal.show();
+                });
+        }
+
+        function eliminar(idVal) {
+            idEliminar = idVal;
+            confirmModal.show();
+        }
+
+        async function confirmarEliminar() {
+        await fetch(`/api/vacacion/${idEliminar}`, {
+            method: "DELETE"
+        });
+
+        confirmModal.hide();
+        cargar();
+    }
+    </script>
+}

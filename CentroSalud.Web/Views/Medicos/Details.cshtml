@@ -1,0 +1,88 @@
+@{
+    Layout = "_Layout";
+}
+
+<button class="btn btn-secondary mb-3" onclick="window.history.back()">Volver</button>
+<h2>Detalle de Médico</h2>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+        <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+        <p><strong>Tipo:</strong> <span id="tipo"></span></p>
+    </div>
+</div>
+
+<h4>Horarios</h4>
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Día</th>
+            <th>Inicio</th>
+            <th>Fin</th>
+        </tr>
+    </thead>
+    <tbody id="horarios"></tbody>
+</table>
+
+<h4>Sustituciones</h4>
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Fecha</th>
+            <th>Médico Reemplazado</th>
+        </tr>
+    </thead>
+    <tbody id="sustituciones"></tbody>
+</table>
+
+@section Scripts {
+<script>
+const id = window.location.pathname.split("/").pop();
+
+function diaTexto(dia) {
+    const dias = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+    return dias[dia];
+}
+
+function hora(h) {
+    return h.substring(0,5);
+}
+
+async function cargar() {
+    let res = await fetch(`/api/Medico/GetById/${id}`);
+    let m = await res.json();
+
+    nombre.innerText = m.nombre;
+    telefono.innerText = m.telefono;
+    tipo.innerText = m.tipo;
+
+    // 🔥 HORARIOS
+    let htmlH = "";
+    m.horarios.forEach(h => {
+        htmlH += `
+        <tr>
+            <td>${diaTexto(h.dia)}</td>
+            <td>${hora(h.horaInicio)}</td>
+            <td>${hora(h.horaFin)}</td>
+        </tr>`;
+    });
+
+    horarios.innerHTML = htmlH;
+
+    // 🔥 SUSTITUCIONES
+    let htmlS = "";
+    m.sustituciones.forEach(s => {
+        htmlS += `
+        <tr>
+            <td>${s.fecha ?? ""}</td>
+            <td>${s.medicoReemplazadoNombre ?? ""}</td>
+        </tr>`;
+    });
+
+    sustituciones.innerHTML = htmlS || "<tr><td colspan='2'>Sin datos</td></tr>";
+}
+
+cargar();
+</script>
+}

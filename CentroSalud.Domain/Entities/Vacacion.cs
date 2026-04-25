@@ -2,9 +2,9 @@
 
 namespace CentroSalud.Domain.Entities
 {
-    public class Vacacion : BaseEntity
-    {
-      public int? EmpleadoId { get; set; }
+  public class Vacacion : BaseEntity
+  {
+    public int? EmpleadoId { get; set; }
     public Empleado? Empleado { get; set; }
 
     public int? MedicoId { get; set; }
@@ -16,5 +16,5 @@ namespace CentroSalud.Domain.Entities
     public int DiasTomados { get; set; }
 
     public bool Activa { get; set; }
-    }
+  }
 }

@@ -13,5 +13,8 @@ namespace CentroSalud.Application.DTOs
         public string Direccion { get; set; } = "";
         public string Poblacion { get; set; } = "";
         public string Provincia { get; set; } = "";
+        public string CodigoPostal { get; set; } = "";
+        public string NIF { get; set; } = "";
+        public string NumeroSeguridadSocial { get; set; } = "";
     }
 }

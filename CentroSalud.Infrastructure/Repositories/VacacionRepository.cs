@@ -12,6 +12,11 @@ public class VacacionRepository : IVacacionRepository
         _context = context;
     }
 
+    public async Task<List<Vacacion>> GetALL()
+    {
+        return await _context.Vacaciones.Include(v => v.Empleado).Include(v => v.Medico).ToListAsync();
+    }
+
     public async Task<List<Vacacion>> GetByEmpleadoIdAsync(int empleadoId)
     {
         return await _context.Vacaciones

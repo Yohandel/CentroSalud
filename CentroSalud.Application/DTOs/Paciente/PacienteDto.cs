@@ -10,4 +10,5 @@ public class PacienteDto
     public string NIF { get; set; } = "";
     public string NumeroSeguridadSocial { get; set; } = "";
     public int MedicoId { get; set; }
+    public string MedicoNombre { get; set; } = "";
 }

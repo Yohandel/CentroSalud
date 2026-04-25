@@ -6,10 +6,10 @@ namespace CentroSalud.Domain.Enums
 {
     public enum TipoEmpleado
     {
-        ATS,
-        ATSZona,
-        AuxiliarEnfermeria,
-        Celador,
-        Administrativo
+        ATS, // Auxiliar Técnico Sanitario opcion 0
+        ATSZona, // Auxiliar Técnico Sanitario de Zona opcion 1
+        AuxiliarEnfermeria, // Auxiliar de Enfermería opcion 2
+        Celador,// Celador opcion 3
+        Administrativo// Administrativo opcion 4
     }
 }

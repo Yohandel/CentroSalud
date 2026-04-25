@@ -25,7 +25,13 @@ public class MedicoService : IMedicoService
             Nombre = m.Nombre,
             Telefono = m.Telefono,
             Tipo = m.Tipo.ToString(),
-              
+            Direccion = m.Direccion,
+            Poblacion = m.Poblacion,
+            Provincia = m.Provincia,
+            CodigoPostal = m.CodigoPostal,
+            NIF = m.NIF,
+            NumeroSeguridadSocial = m.NumeroSeguridadSocial,
+            NumeroColegiado = m.NumeroColegiado
         }).ToList();
 
     }
@@ -41,13 +47,20 @@ public class MedicoService : IMedicoService
             Nombre = m.Nombre,
             Telefono = m.Telefono,
             Tipo = m.Tipo.ToString(),
+            Direccion = m.Direccion,
+            Poblacion = m.Poblacion,
+            Provincia = m.Provincia,
+            CodigoPostal = m.CodigoPostal,
+            NIF = m.NIF,
+            NumeroSeguridadSocial = m.NumeroSeguridadSocial,
+            NumeroColegiado = m.NumeroColegiado,
              Horarios = m.Horarios.Select(h => new HorarioDto
              {
 
                  Id = h.Id,
-                 Dia = h.Dia.ToString(),
-                 HoraInicio = h.HoraInicio.ToString(),
-                 HoraFin = h.HoraFin.ToString()
+                 Dia = h.Dia,
+                 HoraInicio = h.HoraInicio,
+                 HoraFin = h.HoraFin
 
 
              }).ToList(),
@@ -102,6 +115,13 @@ public class MedicoService : IMedicoService
         medico.Nombre = dto.Nombre;
         medico.Direccion = dto.Direccion;
         medico.Telefono = dto.Telefono;
+        medico.Poblacion = dto.Poblacion;
+        medico.Provincia = dto.Provincia;
+        medico.CodigoPostal = dto.CodigoPostal;
+        medico.NIF = dto.NIF;
+        medico.NumeroSeguridadSocial = dto.NumeroSeguridadSocial;
+        medico.NumeroColegiado = dto.NumeroColegiado;
+        medico.Tipo = (CentroSalud.Domain.Enums.TipoMedico)dto.Tipo;
 
         await _repo.UpdateAsync(medico);
     }

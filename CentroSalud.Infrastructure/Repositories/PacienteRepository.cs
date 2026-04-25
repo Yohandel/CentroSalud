@@ -17,12 +17,14 @@ public class PacienteRepository : IPacienteRepository
     public async Task<List<Paciente>> GetAllAsync()
     {
         return await _context.Pacientes
+             .Include(p => p.Medico)
             .ToListAsync();
     }
 
     public async Task<Paciente?> GetByIdAsync(int id)
     {
         return await _context.Pacientes
+            .Include(p => p.Medico)
             .FirstOrDefaultAsync(p => p.Id == id);
     }
 

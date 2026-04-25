@@ -1,0 +1,39 @@
+@{
+    Layout = "_Layout";
+}
+<button class="btn btn-secondary mb-3" onclick="window.history.back()">Volver</button>
+<h2>Detalle de Paciente</h2>
+
+<div class="card">
+    <div class="card-body">
+        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+        <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+        <p><strong>Dirección:</strong> <span id="direccion"></span></p>
+        <p><strong>Código Postal:</strong> <span id="codigoPostal"></span></p>
+        <p><strong>NIF:</strong> <span id="nif"></span></p>
+        <p><strong>Seguridad Social:</strong> <span id="nss"></span></p>
+        <p><strong>Médico:</strong> <span id="medico"></span></p>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+const id = window.location.pathname.split("/").pop();
+
+async function cargar() {
+    let res = await fetch(`/api/Paciente/GetById/${id}`);
+    let p = await res.json();
+
+    nombre.innerText = p.nombre;
+    telefono.innerText = p.telefono;
+    direccion.innerText = p.direccion;
+    codigoPostal.innerText = p.codigoPostal;
+    nif.innerText = p.nif;
+    nss.innerText = p.numeroSeguridadSocial;
+
+    medico.innerText = p.medicoNombre || "Sin asignar";
+}
+
+cargar();
+</script>
+}
