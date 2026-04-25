@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CentroSalud.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6b125f780614131aa2f6add37450bf23f9a66e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e06b123ae8471f53909df1e6d6adc86c5de07660")]
 [assembly: System.Reflection.AssemblyProductAttribute("CentroSalud.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CentroSalud.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
