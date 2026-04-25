@@ -1,0 +1,163 @@
+@{
+    Layout = "_Layout";
+}
+
+<h2>Sustituciones</h2>
+
+<button class="btn btn-success mb-3" onclick="abrirModal()">Nueva Sustitución</button>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Médico</th>
+            <th>Médico Reemplazado</th>
+            <th>Fecha Alta</th>
+            <th>Fecha Baja</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="tabla"></tbody>
+</table>
+
+<!-- 🔥 MODAL CREAR -->
+<div class="modal fade" id="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Nueva Sustitución</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <select id="medico" class="form-control mb-2"></select>
+
+                <select id="medicoReemplazado" class="form-control mb-2"></select>
+
+                <input type="date" id="fechaAlta" class="form-control mb-2">
+                <input type="date" id="fechaBaja" class="form-control">
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="guardar()">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 🔥 MODAL FINALIZAR -->
+<div class="modal fade" id="confirmModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Finalizar Sustitución</h5>
+            </div>
+
+            <div class="modal-body">
+                ¿Está seguro de finalizar esta sustitución?
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-danger" onclick="confirmarFinalizar()">Sí</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+let modal, confirmModal;
+let idFinalizar = 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+    modal = new bootstrap.Modal(document.getElementById("modal"));
+    confirmModal = new bootstrap.Modal(document.getElementById("confirmModal"));
+
+    cargar();
+    cargarMedicos();
+});
+
+async function cargar() {
+    let res = await fetch("/api/Medico/GetSustituciones");
+    let data = await res.json();
+
+    let html = "";
+
+    data.forEach(s => {
+        html += `
+        <tr>
+            <td>${s.medicoNombre}</td>
+            <td>${s.medicoReemplazadoNombre}</td>
+            <td>${formatearFecha(s.fechaAlta)}</td>
+            <td>${s.fechaBaja ? formatearFecha(s.fechaBaja) : "Activa"}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" onclick="finalizar(${s.id})">
+                    Finalizar
+                </button>
+            </td>
+        </tr>`;
+    });
+
+    tabla.innerHTML = html;
+}
+
+async function cargarMedicos() {
+    let res = await fetch("/api/Medico/GetAll");
+    let data = await res.json();
+
+    medico.innerHTML = "";
+    medicoReemplazado.innerHTML = "";
+
+    data.forEach(m => {
+        medico.innerHTML += `<option value="${m.id}">${m.nombre}</option>`;
+        medicoReemplazado.innerHTML += `<option value="${m.id}">${m.nombre}</option>`;
+    });
+}
+
+function abrirModal() {
+    fechaAlta.value = "";
+    fechaBaja.value = "";
+    modal.show();
+}
+
+async function guardar() {
+    let data = {
+        medicoId: parseInt(medico.value),
+        medicoReemplazadoId: parseInt(medicoReemplazado.value),
+        fechaAlta: fechaAlta.value + "T06:42:51.564Z",
+        fechaBaja: fechaBaja.value + "T06:42:51.564Z" || null
+    };
+
+    await fetch("/api/Medico/sustitucion", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    modal.hide();
+    cargar();
+}
+
+function finalizar(id) {
+    idFinalizar = id;
+    confirmModal.show();
+}
+
+async function confirmarFinalizar() {
+    await fetch(`/api/Medico/sustitucion/${idFinalizar}/finalizar`, {
+        method: "PUT"
+    });
+
+    confirmModal.hide();
+    cargar();
+}
+
+function formatearFecha(f) {
+    return new Date(f).toLocaleDateString();
+}
+</script>
+}

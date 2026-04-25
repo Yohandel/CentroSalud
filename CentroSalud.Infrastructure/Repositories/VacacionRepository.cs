@@ -39,7 +39,8 @@ public class VacacionRepository : IVacacionRepository
 
     public async Task<Vacacion?> GetByIdAsync(int id)
     {
-        return await _context.Vacaciones.FindAsync(id);
+        return await _context.Vacaciones.Include(v => v.Empleado).Include(v => v.Medico)
+        .FirstOrDefaultAsync(v => v.Id == id);
     }
 
     public async Task UpdateAsync(Vacacion vacacion)

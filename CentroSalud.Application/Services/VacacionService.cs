@@ -30,6 +30,25 @@ public class VacacionService : IVacacionService
         }).ToList();
     }
 
+        public async Task<VacacionDto?> GetByIdAsync(int id)
+        {
+            var v = await _repo.GetByIdAsync(id);
+            if (v == null) return null;
+    
+            return new VacacionDto
+            {
+                Id = v.Id,
+                EmpleadoId = v.EmpleadoId,
+                NombreEmpleado = v.Empleado != null ? v.Empleado.Nombre : null,
+                MedicoId = v.MedicoId,
+                NombreMedico = v.Medico != null ? v.Medico.Nombre : null,
+                FechaInicio = v.FechaInicio,
+                FechaFin = v.FechaFin,
+                DiasTomados = v.DiasTomados,
+                DiasRestantes = 15 - v.DiasTomados, // Cálculo simple, se puede mejorar
+                Activa = v.Activa
+            };
+        }
 
     // Obtención de vacaciones, sumando los días tomados para calcular los restantes
     public async Task<List<VacacionDto>> GetAsync(int? empleadoId, int? medicoId)

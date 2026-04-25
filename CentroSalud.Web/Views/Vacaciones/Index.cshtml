@@ -33,10 +33,14 @@
             <div class="modal-body">
                 <input type="hidden" id="id">
 
-                <input id="empleadoId" class="form-control mb-2" placeholder="EmpleadoId">
-                <input id="medicoId" class="form-control mb-2" placeholder="MedicoId">
-
-                <input type="date" id="inicio" class="form-control mb-2">
+                <select id="tipo" class="form-select mb-2">
+                    <option disabled value="">Seleccionar Tipo Colaborador</option>
+                    <option value="empleado">Empleado</option>
+                    <option value="medico">Médico</option>
+                </select>
+                <select style="display: none;" id="medico" class="form-control mb-2"></select>
+                <select style="display: none;" id="empleado" class="form-control mb-2"></select>
+                <input  type="date" id="inicio" class="form-control mb-2">
                 <input type="date" id="fin" class="form-control">
             </div>
 
@@ -66,7 +70,7 @@
             </div>
 
             <div class="modal-footer">
-                <button class="btn btn-danger" onclick="confirmarEliminar()">Posponer</button>
+                <button class="btn btn-danger" onclick="confirmarPosponer()">Posponer</button>
                 <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
 
@@ -84,6 +88,8 @@
             confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
 
             cargar();
+            cargarMedicos();
+            cargarEmpleados();
         });
 
         async function cargar() {
@@ -96,13 +102,13 @@
             <tr>
                 <td>${v.id}</td>
                 <td>${v.nombreEmpleado || v.nombreMedico}</td>
-                <td>${v.fechaInicio}</td>
-                <td>${v.fechaFin}</td>
+                <td>${v.fechaInicio.split('T')[0]}</td>
+                <td>${v.fechaFin.split('T')[0]}</td>
                 <td>${v.diasTomados}</td>
                 <td>${v.diasRestantes}</td>
                 <td>
                     <button class="btn btn-warning btn-sm" onclick="editar(${v.id})">Editar</button>
-                    <button class="btn btn-danger btn-sm" onclick="eliminar(${v.id})">Posponer</button>
+                    <button class="btn btn-danger btn-sm" onclick="posponer(${v.id})">Posponer</button>
                 </td>
             </tr>`;
             });
@@ -110,21 +116,60 @@
             tabla.innerHTML = html;
         }
 
+         async function cargarMedicos() {
+            let res = await fetch("/api/Medico/GetAll");
+            let data = await res.json();
+
+            let select = document.getElementById("medico");
+            select.innerHTML = "";
+
+            data.forEach(m => {
+                select.innerHTML += `<option value="${m.id}">${m.nombre}</option>`;
+            });
+        }
+
+        async function cargarEmpleados() {
+            let res = await fetch("/api/Empleado/GetAll");
+            let data = await res.json();
+
+            let select = document.getElementById("empleado");
+            select.innerHTML = "";
+
+            data.forEach(e => {
+                select.innerHTML += `<option value="${e.id}">${e.nombre}</option>`;
+            });
+        }
+
         function abrirModal() {
             id.value = "";
-            empleadoId.value = "";
-            medicoId.value = "";
+            empleado.value = "";
+            medico.value = "";
             inicio.value = "";
             fin.value = "";
             modal.show();
+
+            let tipoSelect = document.getElementById("tipo");
+            tipoSelect.value = "";
+                tipoSelect.onchange = function() {
+                    if (this.value === "empleado") {
+                        empleado.style.display = "block";
+                        medico.style.display = "none";
+                    } else if (this.value === "medico") {
+                        empleado.style.display = "none";
+                        medico.style.display = "block";
+                    } else {
+                        empleado.style.display = "none";
+                        medico.style.display = "none";
+                    }
+                };
         }
 
         async function guardar() {
             let data = {
-                empleadoId: empleadoId.value || null,
-                medicoId: medicoId.value || null,
-                fechaInicio: inicio.value,
-                fechaFin: fin.value
+                empleadoId: empleado.value || null,
+                medicoId: medico.value || null,
+                fechaInicio: inicio.value.split('T')[0],
+                fechaFin: fin.value.split('T')[0]
             };
 
             if (id.value)
@@ -137,26 +182,50 @@
         }
 
         function editar(id) {
-            fetch(`/api/Vacacion/GetAllByPerson`)
+            fetch(`/api/Vacacion/GetById/${id}`)
                 .then(res => res.json())
                 .then(v => {
                     id.value = v.id;
-                    empleadoId.value = v.empleadoId || "";
-                    medicoId.value = v.medicoId || "";
-                    inicio.value = v.fechaInicio;
-                    fin.value = v.fechaFin;
+                    empleado.value = v.empleadoId || "";
+                    medico.value = v.medicoId || "";
+                    inicio.value = v.fechaInicio.split('T')[0];
+                    fin.value = v.fechaFin.split('T')[0];
                     modal.show();
+                    let tipoSelect = document.getElementById("tipo");
+                    if (v.empleadoId) {
+                        tipoSelect.value = "empleado";
+                        empleado.style.display = "block";
+                        medico.style.display = "none";
+                    } else {
+                        tipoSelect.value = "medico";
+                        empleado.style.display = "none";
+                        medico.style.display = "block";
+                    }
                 });
         }
 
-        function eliminar(idVal) {
-            idEliminar = idVal;
+        function posponer(idVal) {
+            fetch(`/api/Vacacion/GetById/${idVal}`)
+                .then(res => res.json())
+                .then(v => {
+                    id.value = v.id;
+                    colaborador.textContent = v.nombreEmpleado || v.nombreMedico;
+                    fechaInicio.textContent = v.fechaInicio.split('T')[0];
+                    fechaFin.textContent = v.fechaFin.split('T')[0];
+                    confirmModal.show();
+                });
             confirmModal.show();
         }
 
-        async function confirmarEliminar() {
-        await fetch(`/api/vacacion/${idEliminar}`, {
-            method: "DELETE"
+        async function confirmarPosponer() {
+            let data = {
+                vacacionId: id.value,
+                fechaCancelacion: fechaCancelacion.value + "T06:42:51.564Z"
+            };
+        await fetch(`/api/Vacacion/Cancel`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
         });
 
         confirmModal.hide();

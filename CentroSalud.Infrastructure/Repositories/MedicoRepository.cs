@@ -28,7 +28,10 @@ public class MedicoRepository : IMedicoRepository
         return await _context.Medicos
             .Include(m => m.Horarios)
             .Include(m => m.SustitucionesComoSustituto)
+                .ThenInclude(s => s.MedicoReemplazado)
             .Include(m => m.SustitucionesComoReemplazado)
+                .ThenInclude(s => s.MedicoSustituto)
+
             .FirstOrDefaultAsync(m => m.Id == id);
     }
 

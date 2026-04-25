@@ -68,6 +68,8 @@ public class MedicoService : IMedicoService
                 {
                     MedicoId = s.Id,
                     MedicoReemplazadoId = s.MedicoReemplazadoId,
+                    MedicoReemplazadoNombre = s.MedicoReemplazado.Nombre,
+                    MedicoNombre = s.MedicoSustituto.Nombre,
                     FechaAlta = s.FechaInicio,
                     FechaBaja = s.FechaFin
                 }).ToList()

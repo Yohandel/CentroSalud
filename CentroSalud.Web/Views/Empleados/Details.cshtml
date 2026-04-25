@@ -16,6 +16,19 @@
     </div>
 </div>
 
+<h4>Vacaciones</h4>
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+            <th>Dias Tomados</th>
+            <th>Dias Restantes</th>
+        </tr>
+    </thead>
+    <tbody id="vacaciones"></tbody>
+</table>
+
 @section Scripts {
 <script>
 const id = window.location.pathname.split("/").pop();
@@ -32,6 +45,26 @@ async function cargar() {
     provincia.innerText = e.provincia;
 }
 
+async function cargarVacaciones() {
+    let res = await fetch(`/api/Vacacion/GetAllByPerson?empleadoId=${id}`);
+    let v = await res.json();
+
+    // 🔥 VACACIONES
+    let htmlV = "";
+    v.forEach(vacacion => {
+        htmlV += `
+        <tr>
+            <td>${vacacion.fechaInicio.split('T')[0] ?? ""}</td>
+            <td>${vacacion.fechaFin.split('T')[0] ?? ""}</td>
+            <td>${vacacion.diasTomados ?? ""}</td>
+            <td>${vacacion.diasRestantes ?? ""}</td>
+        </tr>`;
+    });
+
+    vacaciones.innerHTML = htmlV || "<tr><td colspan='2'>Sin datos</td></tr>";
+}
+
 cargar();
+cargarVacaciones();
 </script>
 }

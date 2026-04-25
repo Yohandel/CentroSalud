@@ -29,11 +29,25 @@
 <table class="table table-bordered">
     <thead class="table-dark">
         <tr>
-            <th>Fecha</th>
+            <th>Fecha Alta</th>
+            <th>Fecha Baja</th>
             <th>Médico Reemplazado</th>
         </tr>
     </thead>
     <tbody id="sustituciones"></tbody>
+</table>
+
+<h4>Vacaciones</h4>
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+            <th>Dias Tomados</th>
+            <th>Dias Restantes</th>
+        </tr>
+    </thead>
+    <tbody id="vacaciones"></tbody>
 </table>
 
 @section Scripts {
@@ -68,14 +82,39 @@ async function cargar() {
         </tr>`;
     });
 
-    horarios.innerHTML = htmlH;
+    horarios.innerHTML = htmlH || "<tr><td colspan='2'>Sin datos</td></tr>";
+}
+
+async function cargarVacaciones() {
+    let res = await fetch(`/api/Vacacion/GetAllByPerson?medicoId=${id}`);
+    let v = await res.json();
+
+    // 🔥 VACACIONES
+    let htmlV = "";
+    v.forEach(vacacion => {
+        htmlV += `
+        <tr>
+            <td>${vacacion.fechaInicio.split('T')[0] ?? ""}</td>
+            <td>${vacacion.fechaFin.split('T')[0] ?? ""}</td>
+            <td>${vacacion.diasTomados ?? ""}</td>
+            <td>${vacacion.diasRestantes ?? ""}</td>
+        </tr>`;
+    });
+
+    vacaciones.innerHTML = htmlV || "<tr><td colspan='2'>Sin datos</td></tr>";
+}
+
+async function cargarSustituciones() {
+    let res = await fetch(`/api/Medico/${id}/sustituciones`);
+    let s = await res.json();
 
     // 🔥 SUSTITUCIONES
     let htmlS = "";
-    m.sustituciones.forEach(s => {
+    s.forEach(s => {
         htmlS += `
         <tr>
-            <td>${s.fecha ?? ""}</td>
+            <td>${s.fechaAlta.split('T')[0] ?? ""}</td>
+            <td>${s.fechaBaja.split('T')[0] ?? ""}</td>
             <td>${s.medicoReemplazadoNombre ?? ""}</td>
         </tr>`;
     });
@@ -84,5 +123,7 @@ async function cargar() {
 }
 
 cargar();
+cargarVacaciones();
+cargarSustituciones();
 </script>
 }

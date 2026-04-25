@@ -18,7 +18,9 @@ public class SustitucionService : ISustitucionService
         return sustituciones.Select(s => new SustitucionDto
         {
             MedicoId = s.MedicoSustitutoId,
+            MedicoNombre = s.MedicoSustituto.Nombre,
             MedicoReemplazadoId = s.MedicoReemplazadoId,
+            MedicoReemplazadoNombre = s.MedicoReemplazado.Nombre,
             FechaAlta = s.FechaInicio,
             FechaBaja = s.FechaFin
         }).ToList();

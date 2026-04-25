@@ -18,6 +18,17 @@ public class VacacionController : ControllerBase
         var result = await _service.GetALL();
         return Ok(result);
     }
+
+     [HttpGet("GetById/{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var vacacion = await _service.GetByIdAsync(id);
+
+        if (vacacion == null)
+            return NotFound();
+
+        return Ok(vacacion);
+    }
     // 🔹 Obtener vacaciones de un empleado
     [HttpGet("GetAllByPerson")]
     public async Task<IActionResult> Get(int? empleadoId, int? medicoId)
